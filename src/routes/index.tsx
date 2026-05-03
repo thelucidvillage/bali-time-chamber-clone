@@ -208,9 +208,9 @@ const FACILITIES = [
   },
   {
     images: [saunaImg, sauna2Img],
-    title: "Wood-Burning Sauna",
+    title: "Recovery Centre (Sauna & Cold Plunge)",
     text:
-      "A traditional wood-burning sauna nestled in the trees — the perfect place to slow down, sweat it out and recover after a hard day.",
+      "Our dedicated recovery space pairs a traditional wood-burning sauna with an ice-cold plunge — the ultimate contrast ritual to reset your nervous system, sharpen your mind and accelerate physical recovery after every session.",
   },
   {
     images: [springsImg, springs2Img],

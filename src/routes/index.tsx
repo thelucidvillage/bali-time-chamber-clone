@@ -195,25 +195,25 @@ function Highlights() {
 
 const FACILITIES = [
   {
-    img: cabinImg,
+    images: [cabinImg, cabin2Img],
     title: "Accommodation",
     text:
       "A spacious guesthouse comfortably accommodating up to 10 guests. Choose between a private room or a cozy shared bed space, all surrounded by forest and mountains.",
   },
   {
-    img: gymImg,
+    images: [gymImg, gym2Img],
     title: "Hybrid Open-Air Gym",
     text:
       "Train in the elements with a fully-equipped outdoor gym — racks, barbells, dumbbells, rings and everything you need to reach peak performance.",
   },
   {
-    img: saunaImg,
+    images: [saunaImg, sauna2Img],
     title: "Wood-Burning Sauna",
     text:
       "A traditional wood-burning sauna nestled in the trees — the perfect place to slow down, sweat it out and recover after a hard day.",
   },
   {
-    img: springsImg,
+    images: [springsImg, springs2Img],
     title: "Natural Hot Springs",
     text:
       "Just minutes away, soak in mineral-rich natural hot springs framed by mountain views. Pure contrast therapy, by nature.",
@@ -233,17 +233,29 @@ function Facilities() {
             <div
               key={f.title}
               className={`grid items-center gap-10 md:grid-cols-2 ${
-                i % 2 ? "md:[&>img]:order-2" : ""
+                i % 2 ? "md:[&>div.facility-media]:order-2" : ""
               }`}
             >
-              <img
-                src={f.img}
-                alt={f.title}
-                width={1280}
-                height={896}
-                loading="lazy"
-                className="aspect-[4/3] w-full object-cover"
-              />
+              <div className="facility-media relative">
+                <Carousel opts={{ loop: true }} className="w-full">
+                  <CarouselContent>
+                    {f.images.map((src, idx) => (
+                      <CarouselItem key={idx}>
+                        <img
+                          src={src}
+                          alt={`${f.title} — ${idx + 1}`}
+                          width={1280}
+                          height={960}
+                          loading="lazy"
+                          className="aspect-[4/3] w-full object-cover"
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+                  <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+                </Carousel>
+              </div>
               <div>
                 <p className="tracking-display text-xs uppercase text-gold">0{i + 1}</p>
                 <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{f.title}</h3>

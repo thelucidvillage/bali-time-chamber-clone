@@ -167,13 +167,13 @@ function Highlights() {
           What makes the Village
         </h2>
         <ul className="mt-12 grid grid-cols-1 gap-x-12 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-          {HIGHLIGHTS.map((h) => (
+          {HIGHLIGHTS.map(({ icon: Icon, text }) => (
             <li
-              key={h}
+              key={text}
               className="flex items-start gap-4 border-b border-border/40 pb-4 text-foreground/90"
             >
-              <span className="text-gold">✦</span>
-              <span className="font-serif text-lg">{h}</span>
+              <Icon className="mt-1 h-5 w-5 shrink-0 text-gold" strokeWidth={1.5} />
+              <span className="font-serif text-lg">{text}</span>
             </li>
           ))}
         </ul>

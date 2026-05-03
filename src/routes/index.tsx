@@ -145,13 +145,15 @@ function Mission() {
   );
 }
 
+import { Flame, Droplets, Mountain, Users, Dumbbell, UtensilsCrossed } from "lucide-react";
+
 const HIGHLIGHTS = [
-  "Recovery centre with sauna & cold plunge",
-  "Direct access to natural hot springs",
-  "Secluded mountain location in Greece",
-  "Community of like-minded guests",
-  "Fully equipped open-air gym",
-  "Home-cooked, nourishing meals",
+  { icon: Flame, text: "Recovery centre with sauna & cold plunge" },
+  { icon: Droplets, text: "Direct access to natural hot springs" },
+  { icon: Mountain, text: "Secluded mountain location in Greece" },
+  { icon: Users, text: "Community of like-minded guests" },
+  { icon: Dumbbell, text: "Fully equipped open-air gym" },
+  { icon: UtensilsCrossed, text: "Home-cooked, nourishing meals" },
 ];
 
 function Highlights() {
@@ -165,13 +167,13 @@ function Highlights() {
           What makes the Village
         </h2>
         <ul className="mt-12 grid grid-cols-1 gap-x-12 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-          {HIGHLIGHTS.map((h) => (
+          {HIGHLIGHTS.map(({ icon: Icon, text }) => (
             <li
-              key={h}
+              key={text}
               className="flex items-start gap-4 border-b border-border/40 pb-4 text-foreground/90"
             >
-              <span className="text-gold">✦</span>
-              <span className="font-serif text-lg">{h}</span>
+              <Icon className="mt-1 h-5 w-5 shrink-0 text-gold" strokeWidth={1.5} />
+              <span className="font-serif text-lg">{text}</span>
             </li>
           ))}
         </ul>

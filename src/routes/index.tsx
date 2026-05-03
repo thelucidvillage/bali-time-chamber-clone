@@ -1,10 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-mountains.jpg";
 import cabinImg from "@/assets/cabin.jpg";
+import cabin2Img from "@/assets/cabin-2.jpg";
 import gymImg from "@/assets/gym.jpg";
+import gym2Img from "@/assets/gym-2.jpg";
 import saunaImg from "@/assets/sauna.jpg";
+import sauna2Img from "@/assets/sauna-2.jpg";
 import springsImg from "@/assets/springs.jpg";
+import springs2Img from "@/assets/springs-2.jpg";
 import logoImg from "@/assets/logo.png";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({

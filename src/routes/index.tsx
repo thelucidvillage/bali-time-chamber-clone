@@ -145,13 +145,15 @@ function Mission() {
   );
 }
 
+import { Flame, Droplets, Mountain, Users, Dumbbell, UtensilsCrossed } from "lucide-react";
+
 const HIGHLIGHTS = [
-  "Recovery centre with sauna & cold plunge",
-  "Direct access to natural hot springs",
-  "Secluded mountain location in Greece",
-  "Community of like-minded guests",
-  "Fully equipped open-air gym",
-  "Home-cooked, nourishing meals",
+  { icon: Flame, text: "Recovery centre with sauna & cold plunge" },
+  { icon: Droplets, text: "Direct access to natural hot springs" },
+  { icon: Mountain, text: "Secluded mountain location in Greece" },
+  { icon: Users, text: "Community of like-minded guests" },
+  { icon: Dumbbell, text: "Fully equipped open-air gym" },
+  { icon: UtensilsCrossed, text: "Home-cooked, nourishing meals" },
 ];
 
 function Highlights() {

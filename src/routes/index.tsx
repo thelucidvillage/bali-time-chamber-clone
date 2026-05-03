@@ -6,8 +6,12 @@ import gymImg from "@/assets/gym.jpg";
 import gym2Img from "@/assets/gym-2.jpg";
 import saunaImg from "@/assets/sauna.jpg";
 import sauna2Img from "@/assets/sauna-2.jpg";
-import springsImg from "@/assets/springs.jpg";
-import springs2Img from "@/assets/springs-2.jpg";
+import advWaterfallImg from "@/assets/adv-waterfall.jpg";
+import advCanyonImg from "@/assets/adv-canyon.jpg";
+import advFreediveImg from "@/assets/adv-freedive.jpg";
+import advHikeImg from "@/assets/adv-hike.jpg";
+import advKayakImg from "@/assets/adv-kayak.jpg";
+import advBeachImg from "@/assets/adv-beach.jpg";
 import logoImg from "@/assets/logo.png";
 import {
   Carousel,
@@ -213,10 +217,17 @@ const FACILITIES = [
       "Our dedicated recovery space pairs a traditional wood-burning sauna with an ice-cold plunge — the ultimate contrast ritual to reset your nervous system, sharpen your mind and accelerate physical recovery after every session.",
   },
   {
-    images: [springsImg, springs2Img],
-    title: "Natural Hot Springs",
+    images: [
+      advWaterfallImg,
+      advCanyonImg,
+      advFreediveImg,
+      advHikeImg,
+      advKayakImg,
+      advBeachImg,
+    ],
+    title: "Nature Adventures",
     text:
-      "Just minutes away, soak in mineral-rich natural hot springs framed by mountain views. Pure contrast therapy, by nature.",
+      "Step outside the village and the wild becomes your playground — swim in turquoise waterfall pools, explore dramatic canyons, freedive to forgotten shipwrecks, summit mountain peaks at sunrise, kayak across crystal-clear water to the private island of Lichadonisia, and end the day training and grilling on the beach. Every week here is a new adventure.",
   },
 ];
 

@@ -68,6 +68,12 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { BrochureModalProvider } from "@/components/BrochureModal";
+
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <BrochureModalProvider>
+      <Outlet />
+    </BrochureModalProvider>
+  );
 }

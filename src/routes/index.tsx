@@ -13,6 +13,7 @@ import advHikeImg from "@/assets/adv-hike.jpg";
 import advKayakImg from "@/assets/adv-kayak.jpg";
 import advBeachImg from "@/assets/adv-beach.jpg";
 import logoImg from "@/assets/logo.png";
+import { useBrochureModal } from "@/components/BrochureModal";
 import {
   Carousel,
   CarouselContent,

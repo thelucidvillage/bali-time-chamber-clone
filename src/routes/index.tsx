@@ -146,15 +146,30 @@ function Mission() {
         <h2 className="mt-6 font-serif text-4xl sm:text-5xl font-light">
           Building a new generation of <span className="text-gold italic">awakened humans</span>
         </h2>
-        <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-          We believe the modern environment is keeping us from fulfilling our potential.
-          The Lucid Village is a sanctuary for the hard-working, the curious and the
-          ambitious — a place to step out of the noise and reconnect with what matters.
-        </p>
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-          Whether you come to train, build, write, recover or simply breathe — this is a
-          place to go all in on yourself.
-        </p>
+        <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
+          <p>
+            The screens. The indoor routines. The endless notifications. The 9-to-5 that quietly spills into everything else. The same conversations, on repeat.{"\n\n"}
+            On the surface, everything works. You move. You train. You eat well. You’re functioning.{"\n\n"}
+            But underneath, there’s something harder to ignore.{"\n\n"}
+            Not burnout. Not breakdown.{"\n"}
+            Just a subtle, persistent disconnection.{"\n\n"}
+            From the environment. From your body. From something more essential.{"\n\n"}
+            Modern life doesn’t feel like a prison because it’s been normalized. But the body remembers. Every time you step outside the pattern—into the sun, into the ocean, into effort that actually matters—you feel it.{"\n\n"}
+            Clarity. Presence. Aliveness.{"\n\n"}
+            Lucid Village exists to make that state the baseline again.{"\n\n"}
+            This is not an escape. It’s a return.{"\n\n"}
+            A return to physical work with purpose.{"\n"}
+            To food that comes from the ground and is prepared with intention.{"\n"}
+            To movement that isn’t performed, but lived.{"\n"}
+            To stillness that isn’t forced, but arises naturally.{"\n"}
+            To small groups of people who share values, not just space.{"\n\n"}
+            We create environments where the nervous system can reset, where the body can recalibrate, and where people can experience—directly—what it feels like to live in alignment with their design.{"\n\n"}
+            No distractions. No excess. No performance.{"\n\n"}
+            Just sun, salt, earth, effort, recovery, and connection.{"\n\n"}
+            Our mission is simple:{"\n\n"}
+            To help people remember what they are—and build a life that reflects it.
+          </p>
+        </div>
       </div>
     </section>
   );

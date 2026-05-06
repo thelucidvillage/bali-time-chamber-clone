@@ -297,6 +297,7 @@ function Facilities() {
 }
 
 function Pricing() {
+  const { open } = useBrochureModal();
   return (
     <section id="pricing" className="bg-card py-24">
       <div className="mx-auto max-w-3xl px-6 text-center">
@@ -310,14 +311,13 @@ function Pricing() {
           everything included in your stay.
         </p>
         <div className="mt-10">
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noreferrer"
+          <button
+            type="button"
+            onClick={open}
             className="inline-flex items-center justify-center border border-primary bg-primary px-10 py-4 text-sm tracking-display uppercase text-primary-foreground transition hover:opacity-90"
           >
             Request the brochure
-          </a>
+          </button>
         </div>
       </div>
     </section>

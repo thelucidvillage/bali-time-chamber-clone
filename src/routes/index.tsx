@@ -311,13 +311,14 @@ function Pricing() {
           everything included in your stay.
         </p>
         <div className="mt-10">
-          <button
-            type="button"
-            onClick={open}
+          <a
+            href="https://tally.so/r/68AeZB"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center border border-primary bg-primary px-10 py-4 text-sm tracking-display uppercase text-primary-foreground transition hover:opacity-90"
           >
             Request the brochure
-          </button>
+          </a>
         </div>
       </div>
     </section>

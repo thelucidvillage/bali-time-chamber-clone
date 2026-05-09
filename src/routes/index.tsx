@@ -336,8 +336,24 @@ const FAQS = [
     a: "Athletes, entrepreneurs, creatives and families looking for a quiet, natural environment to focus, train and reconnect. If you value nature, simplicity and like-minded company, you'll feel at home here.",
   },
   {
-    q: "Are there any workshops or classes?",
-    a: "Ways to Experience The Lucid Village\n\n1. Open Stays (Most Popular)\nEnjoy complete freedom and flexibility. There’s no fixed schedule — you shape your days exactly as you wish. Your host, an experienced Strength & Movement Coach, is available to guide and support your training whenever you need.\n\n2. Curated Events\nThemed group experiences with more structure and guidance. These are perfect if you enjoy training and connecting with like-minded people.\nCheck @thelucidvillage on Instagram for upcoming dates.\n\n3. One-Day Access\nDrop in for a single full day. Includes training, workspace, nourishing meals, and connection (no overnight stay).",
+    q: "What are the ways to experience the Village?",
+    a: (
+      <div className="space-y-5">
+        <p>There are three ways to join us — pick the one that fits you best:</p>
+        <div>
+          <p className="font-serif text-lg text-foreground">1. Open Stays <span className="text-gold text-xs tracking-display uppercase">Most popular</span></p>
+          <p className="mt-1">Complete freedom and flexibility — no fixed schedule. You shape your days exactly as you wish. Your host, an experienced Strength &amp; Movement Coach, is on hand to guide and support your training whenever you need.</p>
+        </div>
+        <div>
+          <p className="font-serif text-lg text-foreground">2. Curated Events</p>
+          <p className="mt-1">Themed group experiences with more structure and guidance. Ideal if you enjoy training and connecting with like-minded people. Follow <a href="https://instagram.com/thelucidvillage" target="_blank" rel="noreferrer" className="text-gold underline underline-offset-4">@thelucidvillage</a> on Instagram for upcoming dates.</p>
+        </div>
+        <div>
+          <p className="font-serif text-lg text-foreground">3. One-Day Access</p>
+          <p className="mt-1">Drop in for a single full day — training, workspace, nourishing meals and connection. No overnight stay.</p>
+        </div>
+      </div>
+    ),
   },
   {
     q: "Is the village really off-grid?",
@@ -368,7 +384,7 @@ function FAQ() {
                 {f.q}
                 <span className="text-gold transition group-open:rotate-45">+</span>
               </summary>
-              <p className="mt-4 text-muted-foreground leading-relaxed">{f.a}</p>
+              <div className="mt-4 text-muted-foreground leading-relaxed">{f.a}</div>
             </details>
           ))}
         </div>

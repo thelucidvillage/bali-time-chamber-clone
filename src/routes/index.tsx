@@ -308,10 +308,9 @@ function Pricing() {
         <h2 className="mt-4 font-serif text-4xl sm:text-5xl font-light">
           Reserve your space
         </h2>
-        <p className="mt-6 text-muted-foreground">
-          Stays are designed to be flexible — by the week or the month. Reach out
-          via WhatsApp and we'll send you the full brochure with pricing, dates and
-          everything included in your stay.
+        <p className="mt-6 text-muted-foreground whitespace-pre-line">
+          Visits are designed to be flexible — Come for 3 days, a week or a full month.
+          Get the free brochure with pricing, dates and everything included in your stay by clicking below.
         </p>
         <div className="mt-10">
           <a

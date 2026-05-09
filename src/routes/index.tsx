@@ -6,7 +6,7 @@ import cabin3Img from "@/assets/aa710589-ec0f-4f37-a5cb-3524cc3024b7.jpg";
 import cabin4Img from "@/assets/763ab336-9329-44b2-9041-3eacef93f799.jpg";
 import cabin5Img from "@/assets/8f808091-1a43-4847-b24c-59f9a0ebb3b8.jpg";
 import gymImg from "@/assets/gym.jpg";
-import gym2Img from "@/assets/gym-2.jpg";
+import gym2Img from "@/assets/ae20129d-af03-4d7e-a862-464053248e79.jpg";
 import saunaImg from "@/assets/sauna.jpg";
 import sauna2Img from "@/assets/sauna-2.jpg";
 import advWaterfallImg from "@/assets/adv-waterfall.jpg";
@@ -277,7 +277,7 @@ function Facilities() {
                           width={1280}
                           height={960}
                           loading="lazy"
-                          className="aspect-[4/3] w-full object-cover"
+                          className="aspect-[4/3] w-full mx-0 object-scale-down"
                         />
                       </CarouselItem>
                     ))}

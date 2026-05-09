@@ -384,7 +384,7 @@ function FAQ() {
                 {f.q}
                 <span className="text-gold transition group-open:rotate-45">+</span>
               </summary>
-              <p className="mt-4 text-muted-foreground leading-relaxed">{f.a}</p>
+              <div className="mt-4 text-muted-foreground leading-relaxed">{f.a}</div>
             </details>
           ))}
         </div>

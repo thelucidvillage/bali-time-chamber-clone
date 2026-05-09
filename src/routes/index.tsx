@@ -179,7 +179,7 @@ function Mission() {
   );
 }
 
-import { Flame, Droplets, Mountain, Users, Dumbbell, UtensilsCrossed } from "lucide-react";
+import { Flame, Droplets, Mountain, Users, Dumbbell, UtensilsCrossed, BedDouble, Wifi, Laptop } from "lucide-react";
 
 const HIGHLIGHTS = [
   { icon: Flame, text: "Recovery centre with sauna & cold plunge" },
@@ -188,6 +188,9 @@ const HIGHLIGHTS = [
   { icon: Users, text: "Community of like-minded guests" },
   { icon: Dumbbell, text: "Fully equipped open-air gym" },
   { icon: UtensilsCrossed, text: "Home-cooked, nourishing meals" },
+  { icon: BedDouble, text: "Multiple cozy accommodation options for private & shared stays" },
+  { icon: Wifi, text: "High-speed internet throughout the village" },
+  { icon: Laptop, text: "Online training platform to support your transformation before & after your visit" },
 ];
 
 function Highlights() {

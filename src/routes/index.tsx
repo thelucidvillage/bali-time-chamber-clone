@@ -259,7 +259,7 @@ function Facilities() {
       <div className="mx-auto max-w-6xl px-6">
         <p className="tracking-display text-center text-xs uppercase text-gold">Facilities</p>
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
-          Everything you need, nothing you don't
+          Everything you need to reset, connect & transform
         </h2>
         <div className="mt-16 space-y-20">
           {FACILITIES.map((f, i) => (

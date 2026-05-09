@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-mountains.jpg";
 import cabinImg from "@/assets/cabin.jpg";
-import cabin2Img from "@/assets/cabin-2.jpg";
+import cabin2Img from "@/assets/908b6d46-3365-4be6-8959-61b9985b7fe4.jpg";
 import gymImg from "@/assets/gym.jpg";
 import gym2Img from "@/assets/gym-2.jpg";
 import saunaImg from "@/assets/sauna.jpg";

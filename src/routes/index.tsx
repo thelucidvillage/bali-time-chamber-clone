@@ -4,7 +4,7 @@ import cabinImg from "@/assets/cabin.jpg";
 import cabin2Img from "@/assets/908b6d46-3365-4be6-8959-61b9985b7fe4.jpg";
 import cabin3Img from "@/assets/aa710589-ec0f-4f37-a5cb-3524cc3024b7.jpg";
 import cabin4Img from "@/assets/763ab336-9329-44b2-9041-3eacef93f799.jpg";
-import cabin5Img from "@/assets/cabin-5.jpg";
+import cabin5Img from "@/assets/8f808091-1a43-4847-b24c-59f9a0ebb3b8.jpg";
 import gymImg from "@/assets/gym.jpg";
 import gym2Img from "@/assets/gym-2.jpg";
 import saunaImg from "@/assets/sauna.jpg";

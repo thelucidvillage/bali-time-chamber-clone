@@ -8,7 +8,7 @@ import cabin5Img from "@/assets/8f808091-1a43-4847-b24c-59f9a0ebb3b8.jpg";
 import gymImg from "@/assets/gym.jpg";
 import gym2Img from "@/assets/ae20129d-af03-4d7e-a862-464053248e79.jpg";
 import saunaImg from "@/assets/34e03719-7c85-495e-9151-d092e0bd443b.jpg";
-import sauna2Img from "@/assets/sauna-2.jpg";
+import sauna2Img from "@/assets/62ce08e2-5241-406d-836b-101d04a0dc41.jpg";
 import advWaterfallImg from "@/assets/adv-waterfall.jpg";
 import advCanyonImg from "@/assets/adv-canyon.jpg";
 import advFreediveImg from "@/assets/adv-freedive.jpg";

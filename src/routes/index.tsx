@@ -230,7 +230,7 @@ const FACILITIES = [
       "Train in the elements with a fully-equipped outdoor gym — racks, barbells, dumbbells, rings and everything you need to reach peak performance.",
   },
   {
-    images: [saunaImg, sauna2Img],
+    images: [sauna2Img, saunaImg],
     title: "Recovery Centre (Sauna & Cold Plunge)",
     text:
       "Our dedicated recovery space pairs a traditional wood-burning sauna with an ice-cold plunge — the ultimate contrast ritual to reset your nervous system, sharpen your mind and accelerate physical recovery after every session.",

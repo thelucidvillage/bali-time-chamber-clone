@@ -383,7 +383,7 @@ function Footer() {
         <p className="font-serif text-2xl">The Lucid Village</p>
         <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-display uppercase text-muted-foreground">
           <a href="#facilities" className="hover:text-foreground">Facilities</a>
-          <a href="#pricing" className="hover:text-foreground">Pricing</a>
+          <a href="https://tally.so/r/68AeZB" target="_blank" rel="noreferrer" className="hover:text-foreground">Pricing</a>
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="hover:text-foreground">
             WhatsApp
           </a>

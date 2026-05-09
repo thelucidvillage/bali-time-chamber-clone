@@ -337,7 +337,7 @@ const FAQS = [
   },
   {
     q: "Are there any workshops or classes?",
-    a: "No fixed schedule. The value of the experience is the environment itself — facilities are open all day and the rhythm of your stay is yours to design.",
+    a: "Ways to Experience The Lucid Village\n\n1. Open Stays (Most Popular)\nEnjoy complete freedom and flexibility. There’s no fixed schedule — you shape your days exactly as you wish. Your host, an experienced Strength & Movement Coach, is available to guide and support your training whenever you need.\n\n2. Curated Events\nThemed group experiences with more structure and guidance. These are perfect if you enjoy training and connecting with like-minded people.\nCheck @thelucidvillage on Instagram for upcoming dates.\n\n3. One-Day Access\nDrop in for a single full day. Includes training, workspace, nourishing meals, and connection (no overnight stay).",
   },
   {
     q: "Is the village really off-grid?",

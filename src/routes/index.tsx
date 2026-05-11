@@ -148,7 +148,7 @@ function Mission() {
       <div className="mx-auto max-w-3xl px-6 text-center">
         <p className="tracking-display text-sm uppercase text-gold">Our Mission</p>
         <h2 className="mt-6 font-serif text-4xl sm:text-5xl font-light">
-          Building a new generation of <span className="text-gold italic">awakened humans</span>
+          To help people remember what they are—and <span className="text-gold italic">build a life that reflects it</span>.
         </h2>
         <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
           <p>

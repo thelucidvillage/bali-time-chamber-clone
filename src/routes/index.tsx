@@ -317,7 +317,40 @@ function Pricing() {
 const FAQS = [
   {
     q: "Who is the Lucid Village for?",
-    a: "Athletes, entrepreneurs, creatives and families looking for a quiet, natural environment to focus, train and reconnect. If you value nature, simplicity and like-minded company, you'll feel at home here.",
+    a: (
+      <div className="space-y-8">
+        <div>
+          <p className="font-serif text-lg text-foreground uppercase tracking-wider text-gold mb-3">WHO THIS IS FOR</p>
+          <p className="font-medium text-foreground mb-4">Lucid Village is not for everyone — and that’s exactly why it works.</p>
+          <p className="mb-4">
+            This is for people who are already on the path. You’ve been training, eating real food, and doing the inner work. You know the feeling of pushing your body and coming alive — but lately you sense there’s more. You’re craving deeper clarity, real connection, and a stronger version of yourself.
+          </p>
+          <p className="mb-3 font-medium text-foreground">This is for you if:</p>
+          <ul className="list-disc pl-5 space-y-1 mb-4">
+            <li>You’re ready to step away from the noise and reset.</li>
+            <li>You want to train, work, and live with people who truly get it.</li>
+            <li>You’re comfortable with simple, rustic living and turning your phone off.</li>
+            <li>You already have discipline and don’t need hand-holding.</li>
+          </ul>
+          <p className="italic">If you’re ready for the next level, you’ll feel right at home. Your people are waiting.</p>
+        </div>
+
+        <div className="pt-4 border-t border-border/40">
+          <p className="font-serif text-lg text-foreground uppercase tracking-wider text-gold mb-3">Who this is NOT for</p>
+          <p className="font-medium text-foreground mb-4">Lucid Village is not for everyone — and we’re clear about that.</p>
+          <p className="mb-3 font-medium text-foreground">This isn’t the right fit if:</p>
+          <ul className="list-disc pl-5 space-y-1 mb-4">
+            <li>You want luxury, comfort, and five-star service.</li>
+            <li>You expect constant entertainment or staff looking after you.</li>
+            <li>You want to stay completely isolated (this is communal living).</li>
+            <li>You’re looking for guided programs and hand-holding.</li>
+            <li>You haven’t been active and aren’t ready to move daily.</li>
+            <li>You’re coming to party or use substances.</li>
+          </ul>
+          <p>If these describe you, this probably isn’t the right place. Lucid Village feels special because of the quality of people who come. <span className="font-medium text-foreground italic">When the right people gather, the magic happens.</span></p>
+        </div>
+      </div>
+    ),
   },
   {
     q: "What are the ways to experience the Village?",

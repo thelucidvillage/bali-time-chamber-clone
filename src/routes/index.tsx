@@ -152,26 +152,10 @@ function Mission() {
         </h2>
         <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
           <p>
-            The screens. The indoor routines. The endless notifications. The 9-to-5 that quietly spills into everything else. The same conversations, on repeat.{"\n\n"}
-            On the surface, everything works. You move. You train. You eat well. You’re functioning.{"\n\n"}
-            But underneath, there’s something harder to ignore.{"\n\n"}
-            Not burnout. Not breakdown.{"\n"}
-            Just a subtle, persistent disconnection.{"\n\n"}
-            From the environment. From your body. From something more essential.{"\n\n"}
-            Modern life doesn’t feel like a prison because it’s been normalized. But the body remembers. Every time you step outside the pattern—into the sun, into the ocean, into effort that actually matters—you feel it.{"\n\n"}
-            Clarity. Presence. Aliveness.{"\n\n"}
-            Lucid Village exists to make that state the baseline again.{"\n\n"}
-            This is not an escape. It’s a return.{"\n\n"}
-            A return to physical work with purpose.{"\n"}
-            To food that comes from the ground and is prepared with intention.{"\n"}
-            To movement that isn’t performed, but lived.{"\n"}
-            To stillness that isn’t forced, but arises naturally.{"\n"}
-            To small groups of people who share values, not just space.{"\n\n"}
-            We create environments where the nervous system can reset, where the body can recalibrate, and where people can experience—directly—what it feels like to live in alignment with their design.{"\n\n"}
-            No distractions. No excess. No performance.{"\n\n"}
-            Just sun, salt, earth, effort, recovery, and connection.{"\n\n"}
-            Our mission is simple:{"\n\n"}
-            To help people remember what they are—and build a life that reflects it.
+            In a world of endless screens, notifications, and a 9-to-5 that quietly consumes everything, a subtle but deep disconnection slowly settles in from your body, from nature, and from who you truly are. We exist to change that.{"\n\n"}
+            This is not an escape. It’s a return{"\n\n"}
+            to purposeful work, food grown from the earth, movement that feels alive, natural stillness, and real connection with people who share your values. Here, your nervous system resets, your body realigns, and you rediscover clarity, presence, and aliveness as your new baseline.{"\n\n"}
+            No distractions. No excess. No performance. Just sun, salt, earth, effort, and connection. We help you remember what you are — and build a life that truly reflects it.
           </p>
         </div>
       </div>

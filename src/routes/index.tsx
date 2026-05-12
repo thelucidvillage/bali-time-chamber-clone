@@ -280,7 +280,7 @@ function AboutUs() {
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
           The people behind the Village
         </h2>
-        <div className="mt-16 grid items-center gap-10 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-2 items-center gap-6 sm:gap-10">
           {/* Left: image carousel (empty placeholder slides — add images later) */}
           <div className="relative">
             <Carousel opts={{ loop: true }} className="w-full">

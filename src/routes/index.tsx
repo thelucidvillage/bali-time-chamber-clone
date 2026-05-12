@@ -596,6 +596,7 @@ function Index() {
       <VideoSection />
       <Mission />
       <Highlights />
+      <AboutUs />
       <Facilities />
       <Pricing />
       <FAQ />

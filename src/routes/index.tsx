@@ -381,45 +381,134 @@ function Facilities() {
   return (
     <section id="facilities" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="tracking-display text-center text-xs uppercase text-gold">Facilities</p>
+        <p className="tracking-display text-center text-xs uppercase text-gold">What is included</p>
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
           Everything you need to reset, connect & transform
         </h2>
         <div className="mt-16 space-y-20">
-          {FACILITIES.map((f, i) => (
-            <div
-              key={f.title}
-              className={`grid items-center gap-10 md:grid-cols-2 ${
-                i % 2 ? "md:[&>div.facility-media]:order-2" : ""
-              }`}
-            >
-              <div className="facility-media relative">
-                <Carousel opts={{ loop: true }} className="w-full">
-                  <CarouselContent>
-                    {f.images.map((src, idx) => (
-                      <CarouselItem key={idx}>
-                        <img
-                          src={src}
-                          alt={`${f.title} — ${idx + 1}`}
-                          width={1280}
-                          height={960}
-                          loading="lazy"
-                          className="aspect-[4/3] w-full object-contain"
-                        />
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
-                  <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
-                </Carousel>
+          {FACILITIES.map((f, i) => {
+            const hasImages = f.images.length > 0;
+            if (!hasImages) {
+              return (
+                <div key={f.title} className="mx-auto max-w-3xl text-center">
+                  <p className="tracking-display text-xs uppercase text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{f.title}</h3>
+                  <p className="mt-5 whitespace-pre-line text-muted-foreground leading-relaxed text-left sm:text-center">
+                    {f.text}
+                  </p>
+                </div>
+              );
+            }
+            return (
+              <div
+                key={f.title}
+                className={`grid items-center gap-10 md:grid-cols-2 ${
+                  i % 2 ? "md:[&>div.facility-media]:order-2" : ""
+                }`}
+              >
+                <div className="facility-media relative">
+                  <Carousel opts={{ loop: true }} className="w-full">
+                    <CarouselContent>
+                      {f.images.map((src, idx) => (
+                        <CarouselItem key={idx}>
+                          <img
+                            src={src}
+                            alt={`${f.title} — ${idx + 1}`}
+                            width={1280}
+                            height={960}
+                            loading="lazy"
+                            className="aspect-[4/3] w-full object-contain"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+                    <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+                  </Carousel>
+                </div>
+                <div>
+                  <p className="tracking-display text-xs uppercase text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{f.title}</h3>
+                  <p className="mt-5 whitespace-pre-line text-muted-foreground leading-relaxed">
+                    {f.text}
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="tracking-display text-xs uppercase text-gold">0{i + 1}</p>
-                <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{f.title}</h3>
-                <p className="mt-5 text-muted-foreground leading-relaxed">{f.text}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Testimonials() {
+  return (
+    <section id="testimonials" className="bg-card border-y border-border/40 py-24">
+      <div className="mx-auto max-w-5xl px-6">
+        <p className="tracking-display text-center text-xs uppercase text-gold">
+          Real people, real testimonials
+        </p>
+        <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
+          What people said about their experience
+        </h2>
+
+        {/* Text testimonials carousel */}
+        <div className="mt-14 px-10">
+          <Carousel opts={{ loop: true }} className="w-full">
+            <CarouselContent>
+              {TEXT_TESTIMONIALS.map((t, idx) => (
+                <CarouselItem key={idx}>
+                  <figure className="mx-auto max-w-2xl text-center">
+                    <blockquote className="font-serif text-2xl sm:text-3xl font-light italic leading-relaxed text-foreground/90">
+                      “{t.quote}”
+                    </blockquote>
+                    <figcaption className="mt-6 tracking-display text-xs uppercase text-gold">
+                      — {t.name}
+                    </figcaption>
+                  </figure>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+            <CarouselNext className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+          </Carousel>
+        </div>
+
+        {/* Video testimonials carousel */}
+        <div className="mt-20">
+          <p className="tracking-display text-center text-xs uppercase text-gold">
+            Video testimonials
+          </p>
+          <h3 className="mt-3 text-center font-serif text-2xl sm:text-3xl font-light">
+            Hear it directly from our guests
+          </h3>
+          <div className="mt-10 px-10">
+            <Carousel opts={{ loop: true }} className="w-full">
+              <CarouselContent>
+                {VIDEO_TESTIMONIALS.map((id) => (
+                  <CarouselItem key={id} className="sm:basis-1/2 lg:basis-1/3">
+                    <div className="aspect-[9/16] w-full overflow-hidden border border-border bg-black">
+                      <iframe
+                        className="h-full w-full"
+                        src={`https://drive.google.com/file/d/${id}/preview`}
+                        title="Guest testimonial"
+                        loading="lazy"
+                        allow="autoplay"
+                        allowFullScreen
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+              <CarouselNext className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>

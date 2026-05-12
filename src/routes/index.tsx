@@ -203,7 +203,13 @@ function Highlights() {
   );
 }
 
-const FACILITIES = [
+type Facility = {
+  images: string[];
+  title: string;
+  text: string;
+};
+
+const FACILITIES: Facility[] = [
   {
     images: [cabinImg, cabin2Img, cabin3Img, cabin4Img, cabin5Img],
     title: "Accommodation",
@@ -223,6 +229,12 @@ const FACILITIES = [
       "Our dedicated recovery space pairs a traditional wood-burning sauna with an ice-cold plunge — the ultimate contrast ritual to reset your nervous system, sharpen your mind and accelerate physical recovery after every session.",
   },
   {
+    images: [],
+    title: "All meals included",
+    text:
+      "All meals are included — breakfast, lunch, and dinner.\n\nWe serve simple, high-quality, nutrient-dense Greek food:\n- Grass-fed red meat from small Olympus farmers\n- Free-range eggs\n- Fresh seasonal vegetables and fruits\n- Local honey and olive oil\n\nEverything is locally sourced to fuel your body and support Greek producers.\n\nClean, nourishing, and delicious — no processed junk. Just real food done right.",
+  },
+  {
     images: [
       advWaterfallImg,
       advCanyonImg,
@@ -235,6 +247,42 @@ const FACILITIES = [
     text:
       "Step outside the village and the wild becomes your playground — swim in turquoise waterfall pools, explore dramatic canyons, freedive to forgotten shipwrecks, summit mountain peaks at sunrise, kayak across crystal-clear water to the private island of Lichadonisia, and end the day training and grilling on the beach. Every week here is a new adventure.",
   },
+  {
+    images: [],
+    title: "Also included in the experience",
+    text:
+      "- Community of inspiring guests: You'll tap into the uplifting energy of other committed, growth-oriented individuals walking a similar path. Together, you'll build authentic friendships and connections that will deeply inspire, empower, challenge, and support you — both personally and professionally — long after you leave.\n- High-speed internet\n- Amenities such as towels, soaps and more\n- All laundry & cleaning services",
+  },
+];
+
+const TEXT_TESTIMONIALS = [
+  {
+    quote:
+      "An experience that completely reset my body and mind. The people, the food, the training — everything was on another level.",
+    name: "Guest",
+  },
+  {
+    quote:
+      "The most authentic place I've ever stayed. You can feel the soul in every corner of the village.",
+    name: "Guest",
+  },
+  {
+    quote:
+      "I came for a week and left with friends for life and a clearer vision for my future.",
+    name: "Guest",
+  },
+];
+
+const VIDEO_TESTIMONIALS = [
+  "1eRZw9lmjWPO2hMFLdlJkV5FmwhpKyC2Z",
+  "1VsQY58TE15EilNtWx1Jz_zyszFTifzav",
+  "12gDLcRh1IFchqf4fOd65aNm36sgWfFLb",
+  "1ZMuCA6PJ6Dyhk4flot_cVL2m7BGSe5y_",
+  "1heaHYvY2DK5QMAcNCTGFzIfW36tXogwx",
+  "14exgq3qXhJIXcvFM-NI7Jqr4qHKw8-u7",
+  "10BDjTiHYY7A0Wjrn3ZTOdkxwekYqLuM3",
+  "1qQKPyV44yyQMo3nLXRTWSMOObflbua-v",
+  "14Q0iXQSzAtAE2CkEqnWC5JtaS-d_l0aL",
 ];
 
 const ABOUT_SLIDES = [
@@ -333,45 +381,134 @@ function Facilities() {
   return (
     <section id="facilities" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="tracking-display text-center text-xs uppercase text-gold">Facilities</p>
+        <p className="tracking-display text-center text-xs uppercase text-gold">What is included</p>
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
           Everything you need to reset, connect & transform
         </h2>
         <div className="mt-16 space-y-20">
-          {FACILITIES.map((f, i) => (
-            <div
-              key={f.title}
-              className={`grid items-center gap-10 md:grid-cols-2 ${
-                i % 2 ? "md:[&>div.facility-media]:order-2" : ""
-              }`}
-            >
-              <div className="facility-media relative">
-                <Carousel opts={{ loop: true }} className="w-full">
-                  <CarouselContent>
-                    {f.images.map((src, idx) => (
-                      <CarouselItem key={idx}>
-                        <img
-                          src={src}
-                          alt={`${f.title} — ${idx + 1}`}
-                          width={1280}
-                          height={960}
-                          loading="lazy"
-                          className="aspect-[4/3] w-full object-contain"
-                        />
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
-                  <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
-                </Carousel>
+          {FACILITIES.map((f, i) => {
+            const hasImages = f.images.length > 0;
+            if (!hasImages) {
+              return (
+                <div key={f.title} className="mx-auto max-w-3xl text-center">
+                  <p className="tracking-display text-xs uppercase text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{f.title}</h3>
+                  <p className="mt-5 whitespace-pre-line text-muted-foreground leading-relaxed text-left sm:text-center">
+                    {f.text}
+                  </p>
+                </div>
+              );
+            }
+            return (
+              <div
+                key={f.title}
+                className={`grid items-center gap-10 md:grid-cols-2 ${
+                  i % 2 ? "md:[&>div.facility-media]:order-2" : ""
+                }`}
+              >
+                <div className="facility-media relative">
+                  <Carousel opts={{ loop: true }} className="w-full">
+                    <CarouselContent>
+                      {f.images.map((src, idx) => (
+                        <CarouselItem key={idx}>
+                          <img
+                            src={src}
+                            alt={`${f.title} — ${idx + 1}`}
+                            width={1280}
+                            height={960}
+                            loading="lazy"
+                            className="aspect-[4/3] w-full object-contain"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+                    <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+                  </Carousel>
+                </div>
+                <div>
+                  <p className="tracking-display text-xs uppercase text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{f.title}</h3>
+                  <p className="mt-5 whitespace-pre-line text-muted-foreground leading-relaxed">
+                    {f.text}
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="tracking-display text-xs uppercase text-gold">0{i + 1}</p>
-                <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{f.title}</h3>
-                <p className="mt-5 text-muted-foreground leading-relaxed">{f.text}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Testimonials() {
+  return (
+    <section id="testimonials" className="bg-card border-y border-border/40 py-24">
+      <div className="mx-auto max-w-5xl px-6">
+        <p className="tracking-display text-center text-xs uppercase text-gold">
+          Real people, real testimonials
+        </p>
+        <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
+          What people said about their experience
+        </h2>
+
+        {/* Text testimonials carousel */}
+        <div className="mt-14 px-10">
+          <Carousel opts={{ loop: true }} className="w-full">
+            <CarouselContent>
+              {TEXT_TESTIMONIALS.map((t, idx) => (
+                <CarouselItem key={idx}>
+                  <figure className="mx-auto max-w-2xl text-center">
+                    <blockquote className="font-serif text-2xl sm:text-3xl font-light italic leading-relaxed text-foreground/90">
+                      “{t.quote}”
+                    </blockquote>
+                    <figcaption className="mt-6 tracking-display text-xs uppercase text-gold">
+                      — {t.name}
+                    </figcaption>
+                  </figure>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+            <CarouselNext className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+          </Carousel>
+        </div>
+
+        {/* Video testimonials carousel */}
+        <div className="mt-20">
+          <p className="tracking-display text-center text-xs uppercase text-gold">
+            Video testimonials
+          </p>
+          <h3 className="mt-3 text-center font-serif text-2xl sm:text-3xl font-light">
+            Hear it directly from our guests
+          </h3>
+          <div className="mt-10 px-10">
+            <Carousel opts={{ loop: true }} className="w-full">
+              <CarouselContent>
+                {VIDEO_TESTIMONIALS.map((id) => (
+                  <CarouselItem key={id} className="sm:basis-1/2 lg:basis-1/3">
+                    <div className="aspect-[9/16] w-full overflow-hidden border border-border bg-black">
+                      <iframe
+                        className="h-full w-full"
+                        src={`https://drive.google.com/file/d/${id}/preview`}
+                        title="Guest testimonial"
+                        loading="lazy"
+                        allow="autoplay"
+                        allowFullScreen
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+              <CarouselNext className="border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>
@@ -598,6 +735,7 @@ function Index() {
       <Highlights />
       <AboutUs />
       <Facilities />
+      <Testimonials />
       <Pricing />
       <FAQ />
       <Footer />

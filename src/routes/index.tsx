@@ -382,7 +382,71 @@ const FAQS = [
   },
   {
     q: "How do I get there?",
-    a: "We'll send you full directions when you book. The closest airports are in Greece — most guests arrange a transfer or rental car for the final stretch into the mountains.",
+    a: (
+      <div className="space-y-6">
+        <div>
+          <p className="font-serif text-lg text-foreground mb-2">Where are you located?</p>
+          <p>
+            Lucid Village is nestled in the mountains of North Evia (Euboea), Greece — a remote, peaceful sanctuary with no neighbors and zero distractions.
+          </p>
+          <p className="mt-3">
+            <a 
+              href="https://maps.app.goo.gl/2VHC3DrLpfQPWUwcA" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="text-gold underline underline-offset-4"
+            >
+              📍The Lucid village Location
+            </a>
+          </p>
+        </div>
+
+        <div className="pt-4 border-t border-border/40">
+          <p className="font-serif text-lg text-foreground mb-2">How long does it take to get here?</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>3.5 hours door-to-door from Athens International Airport (ATH)</li>
+            <li>30 minutes from the port of Edipsos</li>
+          </ul>
+        </div>
+
+        <div className="pt-4 border-t border-border/40">
+          <p className="font-serif text-lg text-foreground mb-2">Transportation Options</p>
+          <p className="mb-3 italic">
+            Transportation is not included in your stay, but once you book we’ll send you detailed instructions tailored to your arrival.
+          </p>
+          
+          <p className="font-medium text-foreground mb-1">From Athens Airport:</p>
+          <ul className="list-disc pl-5 space-y-1 mb-4">
+            <li><span className="text-foreground">Bus:</span> Frequent public buses from Athens directly to Edipsos port (most convenient public option)</li>
+            <li><span className="text-foreground">Private transfer:</span> We can arrange a pickup car for you (additional cost)</li>
+            <li><span className="text-foreground">Car rental:</span> Available at the airport</li>
+          </ul>
+
+          <p className="font-medium text-foreground mb-1">From Edipsos Port to Lucid Village (30 min):</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Taxi</li>
+            <li>Personal pickup by the team (upon request)</li>
+          </ul>
+        </div>
+
+        <div className="pt-4 border-t border-border/40">
+          <p>
+            We’re happy to help coordinate your journey and make the process as smooth as possible.
+          </p>
+          <p className="mt-4 font-medium text-foreground">
+            Feel free to contact us for any questions or reserving your spot:
+          </p>
+          <a 
+            href={WHATSAPP} 
+            target="_blank" 
+            rel="noreferrer" 
+            className="mt-2 inline-flex items-center gap-2 text-gold hover:underline"
+          >
+            🟢 WhatsApp: +30 698 035 8981
+          </a>
+        </div>
+      </div>
+    ),
   },
 ];
 

@@ -735,6 +735,7 @@ function Index() {
       <Highlights />
       <AboutUs />
       <Facilities />
+      <Testimonials />
       <Pricing />
       <FAQ />
       <Footer />

@@ -203,7 +203,13 @@ function Highlights() {
   );
 }
 
-const FACILITIES = [
+type Facility = {
+  images: string[];
+  title: string;
+  text: string;
+};
+
+const FACILITIES: Facility[] = [
   {
     images: [cabinImg, cabin2Img, cabin3Img, cabin4Img, cabin5Img],
     title: "Accommodation",
@@ -223,6 +229,12 @@ const FACILITIES = [
       "Our dedicated recovery space pairs a traditional wood-burning sauna with an ice-cold plunge — the ultimate contrast ritual to reset your nervous system, sharpen your mind and accelerate physical recovery after every session.",
   },
   {
+    images: [],
+    title: "All meals included",
+    text:
+      "All meals are included — breakfast, lunch, and dinner.\n\nWe serve simple, high-quality, nutrient-dense Greek food:\n- Grass-fed red meat from small Olympus farmers\n- Free-range eggs\n- Fresh seasonal vegetables and fruits\n- Local honey and olive oil\n\nEverything is locally sourced to fuel your body and support Greek producers.\n\nClean, nourishing, and delicious — no processed junk. Just real food done right.",
+  },
+  {
     images: [
       advWaterfallImg,
       advCanyonImg,
@@ -235,6 +247,42 @@ const FACILITIES = [
     text:
       "Step outside the village and the wild becomes your playground — swim in turquoise waterfall pools, explore dramatic canyons, freedive to forgotten shipwrecks, summit mountain peaks at sunrise, kayak across crystal-clear water to the private island of Lichadonisia, and end the day training and grilling on the beach. Every week here is a new adventure.",
   },
+  {
+    images: [],
+    title: "Also included in the experience",
+    text:
+      "- Community of inspiring guests: You'll tap into the uplifting energy of other committed, growth-oriented individuals walking a similar path. Together, you'll build authentic friendships and connections that will deeply inspire, empower, challenge, and support you — both personally and professionally — long after you leave.\n- High-speed internet\n- Amenities such as towels, soaps and more\n- All laundry & cleaning services",
+  },
+];
+
+const TEXT_TESTIMONIALS = [
+  {
+    quote:
+      "An experience that completely reset my body and mind. The people, the food, the training — everything was on another level.",
+    name: "Guest",
+  },
+  {
+    quote:
+      "The most authentic place I've ever stayed. You can feel the soul in every corner of the village.",
+    name: "Guest",
+  },
+  {
+    quote:
+      "I came for a week and left with friends for life and a clearer vision for my future.",
+    name: "Guest",
+  },
+];
+
+const VIDEO_TESTIMONIALS = [
+  "1eRZw9lmjWPO2hMFLdlJkV5FmwhpKyC2Z",
+  "1VsQY58TE15EilNtWx1Jz_zyszFTifzav",
+  "12gDLcRh1IFchqf4fOd65aNm36sgWfFLb",
+  "1ZMuCA6PJ6Dyhk4flot_cVL2m7BGSe5y_",
+  "1heaHYvY2DK5QMAcNCTGFzIfW36tXogwx",
+  "14exgq3qXhJIXcvFM-NI7Jqr4qHKw8-u7",
+  "10BDjTiHYY7A0Wjrn3ZTOdkxwekYqLuM3",
+  "1qQKPyV44yyQMo3nLXRTWSMOObflbua-v",
+  "14Q0iXQSzAtAE2CkEqnWC5JtaS-d_l0aL",
 ];
 
 const ABOUT_SLIDES = [

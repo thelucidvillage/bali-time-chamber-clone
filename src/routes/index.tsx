@@ -237,6 +237,98 @@ const FACILITIES = [
   },
 ];
 
+const ABOUT_SLIDES = [
+  {
+    eyebrow: "The Family & The People",
+    title: "Our Story – The Lucid Village",
+    body: `Lucid Village was built with our own hands, heart, and soul. For three years, my family and I — with the help of close friends — carried every stone and beam up the hill and constructed this place from the ground up.
+
+This is not a business. This is our family home.
+
+It is the same land where I took my first steps, climbed trees, and later found myself during the hardest chapters of my life. Every corner was created with love, effort, and sacrifice. There are no investors, no corporate designs — only raw authenticity and soul.
+
+In a world of polished, luxury retreats, Lucid Village stands apart as a living, breathing sanctuary with a real story — one that we now open to you.`,
+  },
+  {
+    eyebrow: "Your Host",
+    title: "Jonathan Huliaros",
+    subtitle: "Founder, Host & Strength & Movement Coach",
+    body: `With over 15 years of experience, Jonathan is a dedicated Strength & Movement Coach who has guided hundreds of people through workshops, courses, and personal training. His approach blends parkour, calisthenics, martial arts, climbing, natural movement, and intelligent strength training.
+
+He specializes in helping people rebuild a deep, loving relationship with their body — turning movement into a source of joy, confidence, and self-discovery.`,
+  },
+  {
+    eyebrow: "How It All Began",
+    title: "My journey started at rock bottom.",
+    body: `After years of living a life that wasn't mine, I fell into deep depression. I dropped my studies, quit my job, bought an old van, turned it into a mobile gym, and drove away in search of answers.
+
+Six years of van life across Europe taught me resilience, freedom, and the importance of surrounding myself with the right people. But something was still missing.
+
+In 2022, I flew to Bali and stepped into the legendary Time Chamber created by my friend Nico De Paoli. That experience changed everything. For the first time, I felt the transformative power of an intentionally designed environment.
+
+I came home with a clear mission: to create something similar — but deeper, more rooted, and real.
+
+The Lucid Village is the embodiment of that vision — my life's most important project.`,
+  },
+];
+
+function AboutUs() {
+  return (
+    <section id="about" className="py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="tracking-display text-center text-xs uppercase text-gold">About Us</p>
+        <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
+          The people behind the Village
+        </h2>
+        <div className="mt-16 grid items-center gap-10 md:grid-cols-2">
+          {/* Left: image carousel (empty placeholder slides — add images later) */}
+          <div className="relative">
+            <Carousel opts={{ loop: true }} className="w-full">
+              <CarouselContent>
+                {ABOUT_SLIDES.map((_, idx) => (
+                  <CarouselItem key={idx}>
+                    <div className="flex aspect-[4/3] w-full items-center justify-center bg-muted text-muted-foreground">
+                      <span className="tracking-display text-xs uppercase">Image {idx + 1}</span>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+              <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+            </Carousel>
+          </div>
+
+          {/* Right: text carousel */}
+          <div className="relative">
+            <Carousel opts={{ loop: true }} className="w-full">
+              <CarouselContent>
+                {ABOUT_SLIDES.map((s, idx) => (
+                  <CarouselItem key={idx}>
+                    <div className="px-2">
+                      <p className="tracking-display text-xs uppercase text-gold">{s.eyebrow}</p>
+                      <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">{s.title}</h3>
+                      {s.subtitle && (
+                        <p className="mt-2 text-sm uppercase tracking-display text-muted-foreground">
+                          {s.subtitle}
+                        </p>
+                      )}
+                      <p className="mt-5 whitespace-pre-line text-muted-foreground leading-relaxed">
+                        {s.body}
+                      </p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+              <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
+            </Carousel>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Facilities() {
   return (
     <section id="facilities" className="py-24">
@@ -504,6 +596,7 @@ function Index() {
       <VideoSection />
       <Mission />
       <Highlights />
+      <AboutUs />
       <Facilities />
       <Pricing />
       <FAQ />

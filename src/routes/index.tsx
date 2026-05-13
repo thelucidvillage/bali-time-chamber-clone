@@ -16,6 +16,18 @@ import advHikeImg from "@/assets/adv-hike.jpg";
 import advKayakImg from "@/assets/adv-kayak.jpg";
 import advBeachImg from "@/assets/adv-beach.jpg";
 import logoImg from "@/assets/logo.png";
+import about1 from "@/assets/about/about-1.jpg";
+import about2 from "@/assets/about/about-2.jpg";
+import about3 from "@/assets/about/about-3.jpg";
+import about4 from "@/assets/about/about-4.jpg";
+import about5 from "@/assets/about/about-5.jpg";
+import about6 from "@/assets/about/about-6.jpg";
+import about7 from "@/assets/about/about-7.jpg";
+import about8 from "@/assets/about/about-8.jpg";
+import about9 from "@/assets/about/about-9.jpg";
+import about10 from "@/assets/about/about-10.jpg";
+
+const ABOUT_IMAGES = [about1, about2, about3, about4, about5, about6, about7, about8, about9, about10];
 import { useBrochureModal } from "@/components/BrochureModal";
 import {
   Carousel,
@@ -287,6 +299,14 @@ const VIDEO_TESTIMONIALS = [
 
 const ABOUT_SLIDES = [
   {
+    eyebrow: "Your Host",
+    title: "Jonathan Huliaros",
+    subtitle: "Founder, Host & Strength & Movement Coach",
+    body: `With over 15 years of experience, Jonathan is a dedicated Strength & Movement Coach who has guided hundreds of people through workshops, courses, and personal training. His approach blends parkour, calisthenics, martial arts, climbing, natural movement, and intelligent strength training.
+
+He specializes in helping people rebuild a deep, loving relationship with their body — turning movement into a source of joy, confidence, and self-discovery.`,
+  },
+  {
     eyebrow: "The Family & The People",
     title: "Our Story – The Lucid Village",
     body: `Lucid Village was built with our own hands, heart, and soul. For three years, my family and I — with the help of close friends — carried every stone and beam up the hill and constructed this place from the ground up.
@@ -296,14 +316,6 @@ This is not a business. This is our family home.
 It is the same land where I took my first steps, climbed trees, and later found myself during the hardest chapters of my life. Every corner was created with love, effort, and sacrifice. There are no investors, no corporate designs — only raw authenticity and soul.
 
 In a world of polished, luxury retreats, Lucid Village stands apart as a living, breathing sanctuary with a real story — one that we now open to you.`,
-  },
-  {
-    eyebrow: "Your Host",
-    title: "Jonathan Huliaros",
-    subtitle: "Founder, Host & Strength & Movement Coach",
-    body: `With over 15 years of experience, Jonathan is a dedicated Strength & Movement Coach who has guided hundreds of people through workshops, courses, and personal training. His approach blends parkour, calisthenics, martial arts, climbing, natural movement, and intelligent strength training.
-
-He specializes in helping people rebuild a deep, loving relationship with their body — turning movement into a source of joy, confidence, and self-discovery.`,
   },
   {
     eyebrow: "How It All Began",
@@ -328,15 +340,20 @@ function AboutUs() {
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
           The people behind the Village
         </h2>
-        <div className="mt-16 grid grid-cols-2 items-center gap-6 sm:gap-10">
-          {/* Left: image carousel (empty placeholder slides — add images later) */}
-          <div className="relative">
+        <div className="mt-16 space-y-10">
+          {/* Image carousel */}
+          <div className="relative mx-auto max-w-3xl">
             <Carousel opts={{ loop: true }} className="w-full">
               <CarouselContent>
-                {ABOUT_SLIDES.map((_, idx) => (
+                {ABOUT_IMAGES.map((src, idx) => (
                   <CarouselItem key={idx}>
-                    <div className="flex aspect-[4/3] w-full items-center justify-center bg-muted text-muted-foreground">
-                      <span className="tracking-display text-xs uppercase">Image {idx + 1}</span>
+                    <div className="aspect-[4/3] w-full overflow-hidden bg-muted">
+                      <img
+                        src={src}
+                        alt={`Lucid Village family moment ${idx + 1}`}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
                     </div>
                   </CarouselItem>
                 ))}
@@ -346,8 +363,8 @@ function AboutUs() {
             </Carousel>
           </div>
 
-          {/* Right: text carousel */}
-          <div className="relative">
+          {/* Text carousel */}
+          <div className="relative mx-auto max-w-3xl">
             <Carousel opts={{ loop: true }} className="w-full">
               <CarouselContent>
                 {ABOUT_SLIDES.map((s, idx) => (

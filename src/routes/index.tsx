@@ -299,6 +299,14 @@ const VIDEO_TESTIMONIALS = [
 
 const ABOUT_SLIDES = [
   {
+    eyebrow: "Your Host",
+    title: "Jonathan Huliaros",
+    subtitle: "Founder, Host & Strength & Movement Coach",
+    body: `With over 15 years of experience, Jonathan is a dedicated Strength & Movement Coach who has guided hundreds of people through workshops, courses, and personal training. His approach blends parkour, calisthenics, martial arts, climbing, natural movement, and intelligent strength training.
+
+He specializes in helping people rebuild a deep, loving relationship with their body — turning movement into a source of joy, confidence, and self-discovery.`,
+  },
+  {
     eyebrow: "The Family & The People",
     title: "Our Story – The Lucid Village",
     body: `Lucid Village was built with our own hands, heart, and soul. For three years, my family and I — with the help of close friends — carried every stone and beam up the hill and constructed this place from the ground up.
@@ -308,14 +316,6 @@ This is not a business. This is our family home.
 It is the same land where I took my first steps, climbed trees, and later found myself during the hardest chapters of my life. Every corner was created with love, effort, and sacrifice. There are no investors, no corporate designs — only raw authenticity and soul.
 
 In a world of polished, luxury retreats, Lucid Village stands apart as a living, breathing sanctuary with a real story — one that we now open to you.`,
-  },
-  {
-    eyebrow: "Your Host",
-    title: "Jonathan Huliaros",
-    subtitle: "Founder, Host & Strength & Movement Coach",
-    body: `With over 15 years of experience, Jonathan is a dedicated Strength & Movement Coach who has guided hundreds of people through workshops, courses, and personal training. His approach blends parkour, calisthenics, martial arts, climbing, natural movement, and intelligent strength training.
-
-He specializes in helping people rebuild a deep, loving relationship with their body — turning movement into a source of joy, confidence, and self-discovery.`,
   },
   {
     eyebrow: "How It All Began",

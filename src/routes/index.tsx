@@ -340,15 +340,20 @@ function AboutUs() {
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
           The people behind the Village
         </h2>
-        <div className="mt-16 grid grid-cols-2 items-center gap-6 sm:gap-10">
-          {/* Left: image carousel (empty placeholder slides — add images later) */}
-          <div className="relative">
+        <div className="mt-16 space-y-10">
+          {/* Image carousel */}
+          <div className="relative mx-auto max-w-3xl">
             <Carousel opts={{ loop: true }} className="w-full">
               <CarouselContent>
-                {ABOUT_SLIDES.map((_, idx) => (
+                {ABOUT_IMAGES.map((src, idx) => (
                   <CarouselItem key={idx}>
-                    <div className="flex aspect-[4/3] w-full items-center justify-center bg-muted text-muted-foreground">
-                      <span className="tracking-display text-xs uppercase">Image {idx + 1}</span>
+                    <div className="aspect-[4/3] w-full overflow-hidden bg-muted">
+                      <img
+                        src={src}
+                        alt={`Lucid Village family moment ${idx + 1}`}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
                     </div>
                   </CarouselItem>
                 ))}
@@ -358,8 +363,8 @@ function AboutUs() {
             </Carousel>
           </div>
 
-          {/* Right: text carousel */}
-          <div className="relative">
+          {/* Text carousel */}
+          <div className="relative mx-auto max-w-3xl">
             <Carousel opts={{ loop: true }} className="w-full">
               <CarouselContent>
                 {ABOUT_SLIDES.map((s, idx) => (

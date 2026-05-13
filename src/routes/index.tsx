@@ -16,6 +16,18 @@ import advHikeImg from "@/assets/adv-hike.jpg";
 import advKayakImg from "@/assets/adv-kayak.jpg";
 import advBeachImg from "@/assets/adv-beach.jpg";
 import logoImg from "@/assets/logo.png";
+import about1 from "@/assets/about/about-1.jpg";
+import about2 from "@/assets/about/about-2.jpg";
+import about3 from "@/assets/about/about-3.jpg";
+import about4 from "@/assets/about/about-4.jpg";
+import about5 from "@/assets/about/about-5.jpg";
+import about6 from "@/assets/about/about-6.jpg";
+import about7 from "@/assets/about/about-7.jpg";
+import about8 from "@/assets/about/about-8.jpg";
+import about9 from "@/assets/about/about-9.jpg";
+import about10 from "@/assets/about/about-10.jpg";
+
+const ABOUT_IMAGES = [about1, about2, about3, about4, about5, about6, about7, about8, about9, about10];
 import { useBrochureModal } from "@/components/BrochureModal";
 import {
   Carousel,

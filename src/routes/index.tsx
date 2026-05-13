@@ -351,7 +351,7 @@ function AboutUs() {
                       <img
                         src={src}
                         alt={`Lucid Village family moment ${idx + 1}`}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-scale-down"
                         loading="lazy"
                       />
                     </div>

@@ -92,14 +92,24 @@ function Header() {
 function Hero() {
   return (
     <section className="relative isolate flex min-h-[88vh] items-center justify-center overflow-hidden">
-      <img
-        src={heroImg}
-        alt="Aerial view of the Lucid Village in the mountains"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/40 via-background/30 to-background" />
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <iframe
+          src="https://www.youtube.com/embed/JEj35KomAno?autoplay=1&mute=1&loop=1&playlist=JEj35KomAno&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3"
+          title="The Lucid Village background video"
+          allow="autoplay; encrypted-media"
+          allowFullScreen={false}
+          frameBorder={0}
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[100vh] w-[177.78vh] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2"
+          aria-hidden="true"
+        />
+        <img
+          src={heroImg}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover opacity-0"
+        />
+      </div>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-background/50 to-background" />
       <div className="mx-auto max-w-4xl px-6 py-24 text-center">
         <p className="tracking-display text-xs sm:text-sm text-gold uppercase">
           Off-grid retreat · Greece

@@ -9,12 +9,15 @@ import gymImg from "@/assets/gym.jpg";
 import gym2Img from "@/assets/ae20129d-af03-4d7e-a862-464053248e79.jpg";
 import saunaImg from "@/assets/34e03719-7c85-495e-9151-d092e0bd443b.jpg";
 import sauna2Img from "@/assets/62ce08e2-5241-406d-836b-101d04a0dc41.jpg";
-import advWaterfallImg from "@/assets/adv-waterfall.jpg";
-import advCanyonImg from "@/assets/adv-canyon.jpg";
-import advFreediveImg from "@/assets/adv-freedive.jpg";
-import advHikeImg from "@/assets/adv-hike.jpg";
-import advKayakImg from "@/assets/adv-kayak.jpg";
-import advBeachImg from "@/assets/adv-beach.jpg";
+import natureTree from "@/assets/nature/nature-tree.jpg.asset.json";
+import natureWatermelon from "@/assets/nature/nature-watermelon.jpg.asset.json";
+import natureSwim from "@/assets/nature/nature-swim.jpg.asset.json";
+import natureDock from "@/assets/nature/nature-dock.jpg.asset.json";
+import natureSpringsAerial from "@/assets/nature/nature-springs-aerial.jpg.asset.json";
+import natureHotsprings from "@/assets/nature/nature-hotsprings.jpg.asset.json";
+import natureFreedive from "@/assets/nature/nature-freedive.jpg.asset.json";
+import natureWaterfall from "@/assets/nature/nature-waterfall.jpg.asset.json";
+import natureCanyon from "@/assets/nature/nature-canyon.jpg.asset.json";
 import logoImg from "@/assets/logo.png";
 import about1 from "@/assets/about/about-1.jpg";
 import about2 from "@/assets/about/about-2.jpg";
@@ -258,12 +261,15 @@ const FACILITIES: Facility[] = [
   },
   {
     images: [
-      advWaterfallImg,
-      advCanyonImg,
-      advFreediveImg,
-      advHikeImg,
-      advKayakImg,
-      advBeachImg,
+      natureWaterfall.url,
+      natureCanyon.url,
+      natureFreedive.url,
+      natureSwim.url,
+      natureSpringsAerial.url,
+      natureHotsprings.url,
+      natureTree.url,
+      natureDock.url,
+      natureWatermelon.url,
     ],
     title: "Nature Adventures",
     text:
@@ -408,7 +414,7 @@ function Facilities() {
   return (
     <section id="facilities" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="tracking-display text-center text-xs uppercase text-gold">What is included</p>
+        <p className="tracking-display text-center text-xs uppercase text-gold">For 100€/day, What is included</p>
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
           Everything you need to reset, connect & transform
         </h2>

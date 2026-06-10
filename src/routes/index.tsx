@@ -261,12 +261,15 @@ const FACILITIES: Facility[] = [
   },
   {
     images: [
-      advWaterfallImg,
-      advCanyonImg,
-      advFreediveImg,
-      advHikeImg,
-      advKayakImg,
-      advBeachImg,
+      natureWaterfall.url,
+      natureCanyon.url,
+      natureFreedive.url,
+      natureSwim.url,
+      natureSpringsAerial.url,
+      natureHotsprings.url,
+      natureTree.url,
+      natureDock.url,
+      natureWatermelon.url,
     ],
     title: "Nature Adventures",
     text:

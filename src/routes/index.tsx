@@ -123,7 +123,7 @@ function Hero() {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#pricing"
+            href="https://tally.so/r/68AeZB"
             className="inline-flex min-w-56 items-center justify-center border border-foreground/80 bg-foreground/95 px-8 py-3 text-sm tracking-display uppercase text-background transition hover:bg-foreground"
           >
             Details &amp; Pricing

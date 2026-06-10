@@ -109,7 +109,7 @@ function Hero() {
           className="absolute inset-0 h-full w-full object-cover opacity-0"
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-background/50 to-background" />
       <div className="mx-auto max-w-4xl px-6 py-24 text-center">
         <p className="tracking-display text-xs sm:text-sm text-gold uppercase">
           Off-grid retreat · Greece

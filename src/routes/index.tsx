@@ -28,6 +28,10 @@ import mealSteaks from "@/assets/meals/meal-steaks.jpg.asset.json";
 import mealHoneyPlate from "@/assets/meals/meal-honey-plate.jpg.asset.json";
 import mealFruitboards from "@/assets/meals/meal-fruitboards.jpg.asset.json";
 import mealDockGrill from "@/assets/meals/meal-dock-grill.jpg.asset.json";
+import gymCommunity1 from "@/assets/gym-community/gym-community-1.jpg.asset.json";
+import gymCommunity2 from "@/assets/gym-community/gym-community-2.jpg.asset.json";
+import gymCommunity3 from "@/assets/gym-community/gym-community-3.jpg.asset.json";
+import gymCommunity4 from "@/assets/gym-community/gym-community-4.jpg.asset.json";
 import logoImg from "@/assets/logo.png";
 import about1 from "@/assets/about/about-1.jpg";
 import about2 from "@/assets/about/about-2.jpg";
@@ -252,7 +256,7 @@ const FACILITIES: Facility[] = [
       "A spacious guesthouse comfortably accommodating up to 10 guests. Choose between a private room or a cozy shared bed space, all surrounded by forest and mountains.",
   },
   {
-    images: [gymImg, gym2Img],
+    images: [gymImg, gym2Img, gymCommunity1.url, gymCommunity2.url, gymCommunity3.url, gymCommunity4.url],
     title: "Hybrid Open-Air Gym",
     text:
       "Train in the elements with a fully-equipped outdoor gym — racks, barbells, dumbbells, rings and everything you need to reach peak performance.",

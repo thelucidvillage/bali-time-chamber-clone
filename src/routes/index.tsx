@@ -18,6 +18,14 @@ import natureHotsprings from "@/assets/nature/nature-hotsprings.jpg.asset.json";
 import natureFreedive from "@/assets/nature/nature-freedive.jpg.asset.json";
 import natureWaterfall from "@/assets/nature/nature-waterfall.jpg.asset.json";
 import natureCanyon from "@/assets/nature/nature-canyon.jpg.asset.json";
+import natureNew1 from "@/assets/nature/nature-new-dji_0114.jpg.asset.json";
+import natureNew2 from "@/assets/nature/nature-new-dji_0125.jpg.asset.json";
+import natureNew3 from "@/assets/nature/nature-new-dji_0161.jpg.asset.json";
+import natureNew4 from "@/assets/nature/nature-new-dji_0129.jpg.asset.json";
+import natureNew5 from "@/assets/nature/nature-new-dji_0082.jpg.asset.json";
+import natureNew6 from "@/assets/nature/nature-new-hi1_5612.jpg.asset.json";
+import natureNew7 from "@/assets/nature/nature-new-photo_2026-05-07_17-28-54.jpg.asset.json";
+import natureNew8 from "@/assets/nature/nature-new-vlcsnap-2025-03-06-13h51m00s525.png.asset.json";
 import mealTable from "@/assets/meals/meal-table.jpg.asset.json";
 import mealFeta from "@/assets/meals/meal-feta.jpg.asset.json";
 import mealDates from "@/assets/meals/meal-dates.jpg.asset.json";
@@ -295,6 +303,14 @@ const FACILITIES: Facility[] = [
       natureTree.url,
       natureDock.url,
       natureWatermelon.url,
+      natureNew1.url,
+      natureNew2.url,
+      natureNew3.url,
+      natureNew4.url,
+      natureNew5.url,
+      natureNew6.url,
+      natureNew7.url,
+      natureNew8.url,
     ],
     title: "Nature Adventures",
     text:

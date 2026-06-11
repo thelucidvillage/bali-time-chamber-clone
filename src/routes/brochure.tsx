@@ -4,8 +4,10 @@ import heroImg from "@/assets/hero-mountains.jpg";
 import cabinImg from "@/assets/cabin.jpg";
 import gymImg from "@/assets/gym.jpg";
 import saunaImg from "@/assets/sauna.jpg";
-import advWaterfallImg from "@/assets/adv-waterfall.jpg";
-import advHikeImg from "@/assets/adv-hike.jpg";
+import advWaterfallAsset from "@/assets/nature/nature-waterfall.jpg.asset.json";
+import advHikeAsset from "@/assets/nature/nature-tree.jpg.asset.json";
+const advWaterfallImg = advWaterfallAsset.url;
+const advHikeImg = advHikeAsset.url;
 import logoImg from "@/assets/logo.png";
 
 export const Route = createFileRoute("/brochure")({

@@ -256,7 +256,7 @@ const FACILITIES: Facility[] = [
       "A spacious guesthouse comfortably accommodating up to 10 guests. Choose between a private room or a cozy shared bed space, all surrounded by forest and mountains.",
   },
   {
-    images: [gymImg, gym2Img],
+    images: [gymImg, gym2Img, gymCommunity1.url, gymCommunity2.url, gymCommunity3.url, gymCommunity4.url],
     title: "Hybrid Open-Air Gym",
     text:
       "Train in the elements with a fully-equipped outdoor gym — racks, barbells, dumbbells, rings and everything you need to reach peak performance.",

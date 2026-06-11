@@ -400,7 +400,7 @@ function AboutUs() {
         <div className="mt-16 space-y-10">
           {/* Image carousel */}
           <div className="relative mx-auto max-w-3xl">
-            <Carousel opts={{ loop: true }} className="w-full">
+            <Carousel opts={{ loop: true, startIndex: 0 }} className="w-full">
               <CarouselContent>
                 {ABOUT_IMAGES.map((src, idx) => (
                   <CarouselItem key={idx}>
@@ -422,7 +422,7 @@ function AboutUs() {
 
           {/* Text carousel */}
           <div className="relative mx-auto max-w-3xl">
-            <Carousel opts={{ loop: true }} className="w-full">
+            <Carousel opts={{ loop: true, startIndex: 0 }} className="w-full">
               <CarouselContent>
                 {ABOUT_SLIDES.map((s, idx) => (
                   <CarouselItem key={idx}>
@@ -483,7 +483,7 @@ function Facilities() {
                 }`}
               >
                 <div className="facility-media relative">
-                  <Carousel opts={{ loop: true }} className="w-full">
+                  <Carousel opts={{ loop: true, startIndex: 0 }} className="w-full">
                     <CarouselContent>
                       {f.images.map((src, idx) => (
                         <CarouselItem key={idx}>
@@ -533,7 +533,7 @@ function Testimonials() {
 
         {/* Text testimonials carousel */}
         <div className="mt-14 px-10">
-          <Carousel opts={{ loop: true }} className="w-full">
+          <Carousel opts={{ loop: true, startIndex: 0 }} className="w-full">
             <CarouselContent>
               {TEXT_TESTIMONIALS.map((t, idx) => (
                 <CarouselItem key={idx}>
@@ -562,7 +562,7 @@ function Testimonials() {
             Hear it directly from our guests
           </h3>
           <div className="mt-10 px-10">
-            <Carousel opts={{ loop: true }} className="w-full">
+            <Carousel opts={{ loop: true, startIndex: 0 }} className="w-full">
               <CarouselContent>
                 {VIDEO_TESTIMONIALS.map((id) => (
                   <CarouselItem key={id} className="sm:basis-1/2 lg:basis-1/3">

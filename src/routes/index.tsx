@@ -18,6 +18,16 @@ import natureHotsprings from "@/assets/nature/nature-hotsprings.jpg.asset.json";
 import natureFreedive from "@/assets/nature/nature-freedive.jpg.asset.json";
 import natureWaterfall from "@/assets/nature/nature-waterfall.jpg.asset.json";
 import natureCanyon from "@/assets/nature/nature-canyon.jpg.asset.json";
+import mealTable from "@/assets/meals/meal-table.jpg.asset.json";
+import mealFeta from "@/assets/meals/meal-feta.jpg.asset.json";
+import mealDates from "@/assets/meals/meal-dates.jpg.asset.json";
+import mealWatermelon from "@/assets/meals/meal-watermelon.jpg.asset.json";
+import mealFruitHoney from "@/assets/meals/meal-fruit-honey.jpg.asset.json";
+import mealBananaHoney from "@/assets/meals/meal-banana-honey.jpg.asset.json";
+import mealSteaks from "@/assets/meals/meal-steaks.jpg.asset.json";
+import mealHoneyPlate from "@/assets/meals/meal-honey-plate.jpg.asset.json";
+import mealFruitboards from "@/assets/meals/meal-fruitboards.jpg.asset.json";
+import mealDockGrill from "@/assets/meals/meal-dock-grill.jpg.asset.json";
 import logoImg from "@/assets/logo.png";
 import about1 from "@/assets/about/about-1.jpg";
 import about2 from "@/assets/about/about-2.jpg";
@@ -254,7 +264,18 @@ const FACILITIES: Facility[] = [
       "Our dedicated recovery space pairs a traditional wood-burning sauna with an ice-cold plunge — the ultimate contrast ritual to reset your nervous system, sharpen your mind and accelerate physical recovery after every session.",
   },
   {
-    images: [],
+    images: [
+      mealTable.url,
+      mealFeta.url,
+      mealSteaks.url,
+      mealDockGrill.url,
+      mealFruitboards.url,
+      mealDates.url,
+      mealFruitHoney.url,
+      mealBananaHoney.url,
+      mealWatermelon.url,
+      mealHoneyPlate.url,
+    ],
     title: "All meals included",
     text:
       "All meals are included — breakfast, lunch, and dinner.\n\nWe serve simple, high-quality, nutrient-dense Greek food:\n- Grass-fed red meat from small Olympus farmers\n- Free-range eggs\n- Fresh seasonal vegetables and fruits\n- Local honey and olive oil\n\nEverything is locally sourced to fuel your body and support Greek producers.\n\nClean, nourishing, and delicious — no processed junk. Just real food done right.",

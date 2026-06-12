@@ -51,6 +51,7 @@ import about7 from "@/assets/about/about-7.jpg";
 import about8 from "@/assets/about/about-8.jpg";
 import about9 from "@/assets/about/about-9.jpg";
 import about10 from "@/assets/about/about-10.jpg";
+import villageAerial from "@/assets/nature/village-aerial.jpg.asset.json";
 
 const ABOUT_IMAGES = [about1, about2, about3, about4, about5, about6, about7, about8, about9, about10];
 import { useBrochureModal } from "@/components/BrochureModal";
@@ -444,6 +445,27 @@ function AboutUs() {
               <CarouselPrevious className="left-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
               <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
             </Carousel>
+          </div>
+
+          {/* How the Lucid Village works */}
+          <div className="mx-auto mt-16 max-w-3xl">
+            <div className="aspect-[3/2] w-full overflow-hidden bg-muted">
+              <img
+                src={villageAerial.url}
+                alt="Aerial view of Lucid Village nestled in the Greek mountains"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <p className="tracking-display text-xs uppercase text-gold">Practical Info</p>
+              <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">
+                How the Lucid Village Works
+              </h3>
+              <p className="mt-5 text-muted-foreground leading-relaxed text-left sm:text-center">
+                <span className="font-medium text-foreground">When to visit:</span> Come whenever you want and stay as long as you need. Minimum stay is 3 days (2 nights) — and the longer you book upfront, the bigger the discount.
+              </p>
+            </div>
           </div>
         </div>
       </div>

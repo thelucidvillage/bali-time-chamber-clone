@@ -51,6 +51,7 @@ import about7 from "@/assets/about/about-7.jpg";
 import about8 from "@/assets/about/about-8.jpg";
 import about9 from "@/assets/about/about-9.jpg";
 import about10 from "@/assets/about/about-10.jpg";
+import villageAerial from "@/assets/nature/village-aerial.jpg.asset.json";
 
 const ABOUT_IMAGES = [about1, about2, about3, about4, about5, about6, about7, about8, about9, about10];
 import { useBrochureModal } from "@/components/BrochureModal";

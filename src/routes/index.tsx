@@ -445,6 +445,27 @@ function AboutUs() {
               <CarouselNext className="right-3 border-foreground/20 bg-background/70 text-foreground hover:bg-background" />
             </Carousel>
           </div>
+
+          {/* How the Lucid Village works */}
+          <div className="mx-auto mt-16 max-w-3xl">
+            <div className="aspect-[3/2] w-full overflow-hidden bg-muted">
+              <img
+                src={villageAerial.url}
+                alt="Aerial view of Lucid Village nestled in the Greek mountains"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <p className="tracking-display text-xs uppercase text-gold">Practical Info</p>
+              <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-light">
+                How the Lucid Village Works
+              </h3>
+              <p className="mt-5 text-muted-foreground leading-relaxed text-left sm:text-center">
+                <span className="font-medium text-foreground">When to visit:</span> Come whenever you want and stay as long as you need. Minimum stay is 3 days (2 nights) — and the longer you book upfront, the bigger the discount.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

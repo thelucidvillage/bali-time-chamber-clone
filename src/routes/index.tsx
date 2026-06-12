@@ -477,9 +477,9 @@ function Facilities() {
   return (
     <section id="facilities" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="tracking-display text-center text-xs uppercase text-gold">For 100€/day, What is included</p>
+        <p className="tracking-display text-center text-xs uppercase text-gold">EVERYTHING YOU NEED TO RESET, CONNECT & TRANSFORM</p>
         <h2 className="mt-4 text-center font-serif text-4xl sm:text-5xl font-light">
-          Everything you need to reset, connect & transform
+          What is included:{"\n"}For 100€/day
         </h2>
         <div className="mt-16 space-y-20">
           {FACILITIES.map((f, i) => {

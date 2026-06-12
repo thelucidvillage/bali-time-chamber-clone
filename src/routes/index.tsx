@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-mountains.jpg";
 import cabinImg from "@/assets/cabin.jpg";
 import cabin2Img from "@/assets/908b6d46-3365-4be6-8959-61b9985b7fe4.jpg";
@@ -148,19 +148,17 @@ function Hero() {
           to heal, grow &amp; find themselves.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            to="/booking"
+            className="inline-flex min-w-56 items-center justify-center border border-primary bg-primary px-8 py-4 text-sm tracking-display uppercase text-primary-foreground transition hover:opacity-90"
+          >
+            Book Your Visit Today
+          </Link>
           <a
             href="https://tally.so/r/68AeZB"
             className="inline-flex min-w-56 items-center justify-center border border-foreground/80 bg-foreground/95 px-8 py-3 text-sm tracking-display uppercase text-background transition hover:bg-foreground"
           >
             Details &amp; Pricing
-          </a>
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex min-w-56 items-center justify-center border border-primary bg-primary px-8 py-3 text-sm tracking-display uppercase text-primary-foreground transition hover:opacity-90"
-          >
-            Book your stay
           </a>
         </div>
       </div>
@@ -624,12 +622,18 @@ function Pricing() {
           Visits are designed to be flexible — Come for 3 days, a week or a full month.
           Get the free brochure with pricing, dates and everything included in your stay by clicking below.
         </p>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            to="/booking"
+            className="inline-flex items-center justify-center border border-primary bg-primary px-10 py-4 text-sm tracking-display uppercase text-primary-foreground transition hover:opacity-90"
+          >
+            Book Your Visit Today
+          </Link>
           <a
             href="https://tally.so/r/68AeZB"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center border border-primary bg-primary px-10 py-4 text-sm tracking-display uppercase text-primary-foreground transition hover:opacity-90"
+            className="inline-flex items-center justify-center border border-foreground/80 px-10 py-4 text-sm tracking-display uppercase text-foreground transition hover:bg-foreground hover:text-background"
           >
             Request the brochure
           </a>

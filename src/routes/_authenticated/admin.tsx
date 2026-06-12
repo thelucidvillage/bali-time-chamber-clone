@@ -1,4 +1,5 @@
-import { createFileRoute, useServerFn, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { useEffect, useMemo, useState } from "react";
 import { format } from "date-fns";
 import { listBookings, updateBooking } from "@/lib/bookings.functions";

@@ -117,10 +117,10 @@ export const updateBooking = createServerFn({ method: "POST" })
     });
     if (!isAdmin) throw new Error("Forbidden");
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    const patch: Record<string, string> = {};
+    const patch: { booking_status?: string; deposit_status?: string } = {};
     if (data.booking_status) patch.booking_status = data.booking_status;
     if (data.deposit_status) patch.deposit_status = data.deposit_status;
-    const { error } = await supabaseAdmin.from("bookings").update(patch).eq("id", data.id);
+    const { error } = await supabaseAdmin.from("bookings").update(patch as never).eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });

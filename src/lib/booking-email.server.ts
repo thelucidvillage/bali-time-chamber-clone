@@ -40,7 +40,10 @@ export async function sendBookingNotification(b: BookingPayload) {
   // Attempt to enqueue via Lovable transactional email infra if available
   try {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    const { error } = await supabaseAdmin.rpc("enqueue_email", {
+    // Use untyped rpc call so this works even before email infra is scaffolded.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const sb = supabaseAdmin as any;
+    const { error } = await sb.rpc("enqueue_email", {
       queue_name: "transactional_emails",
       message: {
         template_name: "booking-notification",
@@ -49,7 +52,6 @@ export async function sendBookingNotification(b: BookingPayload) {
       },
     });
     if (error) {
-      // Template/infra not configured yet — that's OK, log only
       console.warn("[BOOKING_NOTIFICATION] email infra not available:", error.message);
     }
   } catch (err) {

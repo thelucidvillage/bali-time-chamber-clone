@@ -111,7 +111,13 @@ function BookingPage() {
           num_guests: guests,
           arrival_date: toIsoDate(arrival!),
           departure_date: toIsoDate(departure!),
-          special_requests: notes.trim() || null,
+          special_requests:
+            [
+              instagram.trim() ? `Instagram: ${instagram.trim()}` : "",
+              notes.trim(),
+            ]
+              .filter(Boolean)
+              .join("\n\n") || null,
         },
       });
       setSuccess(true);

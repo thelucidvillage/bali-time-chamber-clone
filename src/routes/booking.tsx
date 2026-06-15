@@ -53,7 +53,7 @@ function BookingPage() {
 
   const [arrival, setArrival] = useState<Date | undefined>();
   const [departure, setDeparture] = useState<Date | undefined>();
-  const [guests, setGuests] = useState<number>(2);
+  const [guests, setGuests] = useState<number>(1);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -308,19 +308,6 @@ function BookingPage() {
                 The village has a strict maximum occupancy of {MAX_GUESTS} guests at any given time.
               </p>
             </div>
-            <div className="mt-4">
-              <Label htmlFor="instagram">Instagram handles (optional)</Label>
-              <Input
-                id="instagram"
-                value={instagram}
-                onChange={(e) => setInstagram(e.target.value)}
-                placeholder="@your_handle, @friend_handle"
-                className="mt-2"
-              />
-              <p className="mt-2 text-xs text-muted-foreground">
-                Share the Instagram handles of you and your guests so we can get to know you (optional).
-              </p>
-            </div>
           </section>
 
 
@@ -370,6 +357,19 @@ function BookingPage() {
                   className="mt-2"
                   rows={4}
                 />
+              </div>
+              <div className="sm:col-span-2">
+                <Label htmlFor="instagram">Instagram handles (optional)</Label>
+                <Input
+                  id="instagram"
+                  value={instagram}
+                  onChange={(e) => setInstagram(e.target.value)}
+                  placeholder="@your_handle, @friend_handle"
+                  className="mt-2"
+                />
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Share the Instagram handles of you and your guests so we can get to know you (optional).
+                </p>
               </div>
             </div>
           </section>

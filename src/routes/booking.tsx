@@ -57,6 +57,7 @@ function BookingPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [instagram, setInstagram] = useState("");
   const [notes, setNotes] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -74,6 +75,9 @@ function BookingPage() {
     d.setDate(d.getDate() + MIN_NIGHTS);
     return d;
   }, [arrival, today]);
+
+  // August 2026 is fully blocked
+  const isBlocked = (d: Date) => d.getFullYear() === 2026 && d.getMonth() === 7;
 
   // Clamp departure if arrival changes
   function handleArrivalChange(d?: Date) {
@@ -107,7 +111,13 @@ function BookingPage() {
           num_guests: guests,
           arrival_date: toIsoDate(arrival!),
           departure_date: toIsoDate(departure!),
-          special_requests: notes.trim() || null,
+          special_requests:
+            [
+              instagram.trim() ? `Instagram: ${instagram.trim()}` : "",
+              notes.trim(),
+            ]
+              .filter(Boolean)
+              .join("\n\n") || null,
         },
       });
       setSuccess(true);
@@ -171,6 +181,24 @@ function BookingPage() {
           </p>
         </div>
 
+        {/* Contact host directly */}
+        <section className="mt-10 rounded-lg border border-border bg-card p-8 text-center">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Contact host directly</p>
+          <h3 className="mt-3 font-serif text-2xl">Have questions before booking?</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Jonathan is happy to answer anything about your stay.
+          </p>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 text-sm font-medium uppercase tracking-wider text-white transition hover:bg-[#1ebe57]"
+          >
+            <MessageCircle className="h-4 w-4" />
+            Contact host on WhatsApp
+          </a>
+        </section>
+
         {/* Deposit notice */}
         <div className="mt-10 rounded-lg border-2 border-primary/40 bg-primary/5 p-6">
           <p className="text-xs uppercase tracking-[0.2em] text-primary">Reservation Deposit</p>
@@ -208,7 +236,7 @@ function BookingPage() {
                       mode="single"
                       selected={arrival}
                       onSelect={handleArrivalChange}
-                      disabled={(d) => d < today}
+                      disabled={(d) => d < today || isBlocked(d)}
                       initialFocus
                       className="pointer-events-auto"
                     />
@@ -238,7 +266,7 @@ function BookingPage() {
                       mode="single"
                       selected={departure}
                       onSelect={setDeparture}
-                      disabled={(d) => d < minDeparture}
+                      disabled={(d) => d < minDeparture || isBlocked(d)}
                       initialFocus
                       className="pointer-events-auto"
                     />
@@ -280,7 +308,21 @@ function BookingPage() {
                 The village has a strict maximum occupancy of {MAX_GUESTS} guests at any given time.
               </p>
             </div>
+            <div className="mt-4">
+              <Label htmlFor="instagram">Instagram handles (optional)</Label>
+              <Input
+                id="instagram"
+                value={instagram}
+                onChange={(e) => setInstagram(e.target.value)}
+                placeholder="@your_handle, @friend_handle"
+                className="mt-2"
+              />
+              <p className="mt-2 text-xs text-muted-foreground">
+                Share the Instagram handles of you and your guests so we can get to know you (optional).
+              </p>
+            </div>
           </section>
+
 
           {/* Contact */}
           <section className="rounded-lg border border-border bg-card p-6">
@@ -359,23 +401,6 @@ function BookingPage() {
           </Button>
         </form>
 
-        {/* WhatsApp */}
-        <section className="mt-16 rounded-lg border border-border bg-card p-8 text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Contact host directly</p>
-          <h3 className="mt-3 font-serif text-2xl">Have questions before booking?</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Jonathan is happy to answer anything about your stay.
-          </p>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 text-sm font-medium uppercase tracking-wider text-white transition hover:bg-[#1ebe57]"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Contact host on WhatsApp
-          </a>
-        </section>
 
         <p className="mt-8 text-center text-xs text-muted-foreground">
           Need to manage existing bookings?{" "}

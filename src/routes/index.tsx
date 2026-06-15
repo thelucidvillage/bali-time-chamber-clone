@@ -52,6 +52,16 @@ import about8 from "@/assets/about/about-8.jpg";
 import about9 from "@/assets/about/about-9.jpg";
 import about10 from "@/assets/about/about-10.jpg";
 import villageAerial from "@/assets/nature/village-aerial.jpg.asset.json";
+import accDji11 from "@/assets/accommodation/dji_0011.jpg.asset.json";
+import accDji27 from "@/assets/accommodation/dji_0027.jpg.asset.json";
+import accDji33 from "@/assets/accommodation/dji_0033.jpg.asset.json";
+import accPorchSea from "@/assets/accommodation/photo_2026-06-15_16-53-35.jpg.asset.json";
+import accPorchRed from "@/assets/accommodation/photo_2026-06-15_16-53-51.jpg.asset.json";
+import accInterior from "@/assets/accommodation/photo_2026-06-15_16-53-54.jpg.asset.json";
+import accHandpan from "@/assets/accommodation/hi1_4263.jpg.asset.json";
+import accRusticDining from "@/assets/accommodation/100_euro.00_00_07_22.still002.jpg.asset.json";
+import accRusticBed from "@/assets/accommodation/guatamala.00_00_25_03.still007.jpg.asset.json";
+import accHobbit from "@/assets/accommodation/photo_2026-06-15_16-51-32.jpg.asset.json";
 
 const ABOUT_IMAGES = [about1, about2, about3, about4, about5, about6, about7, about8, about9, about10];
 import { useBrochureModal } from "@/components/BrochureModal";

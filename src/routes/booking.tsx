@@ -212,7 +212,7 @@ function BookingPage() {
                       mode="single"
                       selected={arrival}
                       onSelect={handleArrivalChange}
-                      disabled={(d) => d < today}
+                      disabled={(d) => d < today || isBlocked(d)}
                       initialFocus
                       className="pointer-events-auto"
                     />

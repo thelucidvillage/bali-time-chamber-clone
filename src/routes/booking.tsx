@@ -76,6 +76,9 @@ function BookingPage() {
     return d;
   }, [arrival, today]);
 
+  // August 2026 is fully blocked
+  const isBlocked = (d: Date) => d.getFullYear() === 2026 && d.getMonth() === 7;
+
   // Clamp departure if arrival changes
   function handleArrivalChange(d?: Date) {
     setArrival(d);

@@ -383,23 +383,6 @@ function BookingPage() {
           </Button>
         </form>
 
-        {/* WhatsApp */}
-        <section className="mt-16 rounded-lg border border-border bg-card p-8 text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Contact host directly</p>
-          <h3 className="mt-3 font-serif text-2xl">Have questions before booking?</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Jonathan is happy to answer anything about your stay.
-          </p>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 text-sm font-medium uppercase tracking-wider text-white transition hover:bg-[#1ebe57]"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Contact host on WhatsApp
-          </a>
-        </section>
 
         <p className="mt-8 text-center text-xs text-muted-foreground">
           Need to manage existing bookings?{" "}

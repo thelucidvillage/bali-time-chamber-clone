@@ -267,10 +267,26 @@ type Facility = {
 
 const FACILITIES: Facility[] = [
   {
-    images: [cabinImg, cabin2Img, cabin3Img, cabin4Img, cabin5Img],
+    images: [
+      accDji11.url,
+      accDji27.url,
+      accDji33.url,
+      accInterior.url,
+      accPorchRed.url,
+      accPorchSea.url,
+      accHandpan.url,
+      accHobbit.url,
+      accRusticDining.url,
+      accRusticBed.url,
+      cabinImg,
+      cabin2Img,
+      cabin3Img,
+      cabin4Img,
+      cabin5Img,
+    ],
     title: "Accommodation",
     text:
-      "A spacious guesthouse comfortably accommodating up to 10 guests. Choose between a private room or a cozy shared bed space, all surrounded by forest and mountains.",
+      "Lucid Village offers 3 unique accommodation options, each surrounded by nature with breathtaking mountain and sea views.\n\n1. The Main Guesthouse — the social heart of the village.\n2. The Rustic Guesthouse — a charming homely house all built by hand, deeply connected to nature.\n3. The Hobbit House — a peaceful private sanctuary for couples or solo travelers.\n\nAll spaces are designed to help you slow down, feel at home, and enjoy the beauty and simplicity of village life.",
   },
   {
     images: [gymImg, gym2Img, gymCommunity1.url, gymCommunity2.url, gymCommunity3.url, gymCommunity4.url],

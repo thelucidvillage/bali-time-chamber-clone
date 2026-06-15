@@ -52,6 +52,16 @@ import about8 from "@/assets/about/about-8.jpg";
 import about9 from "@/assets/about/about-9.jpg";
 import about10 from "@/assets/about/about-10.jpg";
 import villageAerial from "@/assets/nature/village-aerial.jpg.asset.json";
+import accDji11 from "@/assets/accommodation/dji_0011.jpg.asset.json";
+import accDji27 from "@/assets/accommodation/dji_0027.jpg.asset.json";
+import accDji33 from "@/assets/accommodation/dji_0033.jpg.asset.json";
+import accPorchSea from "@/assets/accommodation/photo_2026-06-15_16-53-35.jpg.asset.json";
+import accPorchRed from "@/assets/accommodation/photo_2026-06-15_16-53-51.jpg.asset.json";
+import accInterior from "@/assets/accommodation/photo_2026-06-15_16-53-54.jpg.asset.json";
+import accHandpan from "@/assets/accommodation/hi1_4263.jpg.asset.json";
+import accRusticDining from "@/assets/accommodation/100_euro.00_00_07_22.still002.jpg.asset.json";
+import accRusticBed from "@/assets/accommodation/guatamala.00_00_25_03.still007.jpg.asset.json";
+import accHobbit from "@/assets/accommodation/photo_2026-06-15_16-51-32.jpg.asset.json";
 
 const ABOUT_IMAGES = [about1, about2, about3, about4, about5, about6, about7, about8, about9, about10];
 import { useBrochureModal } from "@/components/BrochureModal";
@@ -257,10 +267,26 @@ type Facility = {
 
 const FACILITIES: Facility[] = [
   {
-    images: [cabinImg, cabin2Img, cabin3Img, cabin4Img, cabin5Img],
+    images: [
+      accDji11.url,
+      accDji27.url,
+      accDji33.url,
+      accInterior.url,
+      accPorchRed.url,
+      accPorchSea.url,
+      accHandpan.url,
+      accHobbit.url,
+      accRusticDining.url,
+      accRusticBed.url,
+      cabinImg,
+      cabin2Img,
+      cabin3Img,
+      cabin4Img,
+      cabin5Img,
+    ],
     title: "Accommodation",
     text:
-      "A spacious guesthouse comfortably accommodating up to 10 guests. Choose between a private room or a cozy shared bed space, all surrounded by forest and mountains.",
+      "Lucid Village offers 3 unique accommodation options, each surrounded by nature with breathtaking mountain and sea views.\n\n1. The Main Guesthouse — the social heart of the village.\n2. The Rustic Guesthouse — a charming homely house all built by hand, deeply connected to nature.\n3. The Hobbit House — a peaceful private sanctuary for couples or solo travelers.\n\nAll spaces are designed to help you slow down, feel at home, and enjoy the beauty and simplicity of village life.",
   },
   {
     images: [gymImg, gym2Img, gymCommunity1.url, gymCommunity2.url, gymCommunity3.url, gymCommunity4.url],

@@ -290,7 +290,21 @@ function BookingPage() {
                 The village has a strict maximum occupancy of {MAX_GUESTS} guests at any given time.
               </p>
             </div>
+            <div className="mt-4">
+              <Label htmlFor="instagram">Instagram handles (optional)</Label>
+              <Input
+                id="instagram"
+                value={instagram}
+                onChange={(e) => setInstagram(e.target.value)}
+                placeholder="@your_handle, @friend_handle"
+                className="mt-2"
+              />
+              <p className="mt-2 text-xs text-muted-foreground">
+                Share the Instagram handles of you and your guests so we can get to know you (optional).
+              </p>
+            </div>
           </section>
+
 
           {/* Contact */}
           <section className="rounded-lg border border-border bg-card p-6">

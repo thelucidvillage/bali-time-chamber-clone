@@ -97,7 +97,6 @@ function buildWhatsAppUrl(values: {
 function InquiryPage() {
   const submit = useServerFn(submitInquiry);
 
-  const [showForm, setShowForm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -244,14 +243,8 @@ function InquiryPage() {
             A simple first step toward experiencing village life, meaningful connection, and the
             beauty of nature.
           </p>
-          <button
-            type="button"
-            onClick={() => {
-              setShowForm(true);
-              setTimeout(() => {
-                document.getElementById("inquiry")?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }, 30);
-            }}
+          <a
+            href="#inquiry"
             className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-stone-900 shadow-lg transition hover:bg-stone-100"
           >
             Request a Stay

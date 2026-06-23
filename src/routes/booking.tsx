@@ -199,15 +199,6 @@ function BookingPage() {
           </a>
         </section>
 
-        {/* Deposit notice */}
-        <div className="mt-10 rounded-lg border-2 border-primary/40 bg-primary/5 p-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary">Reservation Deposit</p>
-          <p className="mt-2 text-2xl font-serif">€300 — non-refundable</p>
-          <p className="mt-3 text-sm text-muted-foreground">
-            A fixed non-refundable deposit of <strong>€300</strong> is required to secure your booking, regardless of
-            the length of stay. The remaining balance is paid upon arrival.
-          </p>
-        </div>
 
         <form onSubmit={handleSubmit} className="mt-10 space-y-8">
           {/* Dates */}

@@ -248,7 +248,7 @@ function InquiryPage() {
             className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-stone-900 shadow-lg transition hover:bg-stone-100"
           >
             Request a Stay
-          </button>
+          </a>
         </div>
       </section>
 

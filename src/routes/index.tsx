@@ -655,14 +655,12 @@ function Pricing() {
           >
             Book Your Visit Today
           </Link>
-          <a
-            href="https://tally.so/r/68AeZB"
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/details"
             className="inline-flex items-center justify-center border border-foreground/80 px-10 py-4 text-sm tracking-display uppercase text-foreground transition hover:bg-foreground hover:text-background"
           >
-            Request the brochure
-          </a>
+            Details &amp; Pricing
+          </Link>
         </div>
       </div>
     </section>

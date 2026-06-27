@@ -164,12 +164,12 @@ function Hero() {
           >
             Book Your Visit Today
           </Link>
-          <a
-            href="https://tally.so/r/68AeZB"
+          <Link
+            to="/details"
             className="inline-flex min-w-56 items-center justify-center border border-foreground/80 bg-foreground/95 px-8 py-3 text-sm tracking-display uppercase text-background transition hover:bg-foreground"
           >
             Details &amp; Pricing
-          </a>
+          </Link>
         </div>
       </div>
     </section>

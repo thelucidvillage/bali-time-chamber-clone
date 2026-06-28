@@ -288,21 +288,21 @@ function DetailsPage() {
         <div className="rounded-3xl border border-banner/60 bg-banner p-8 text-banner-foreground sm:p-12">
           <div className="text-center">
             <Eyebrow>
-              <span className="text-stone-400">Protecting the culture</span>
+              <span className="text-banner-foreground/70">Protecting the culture</span>
             </Eyebrow>
             <h2 className="mt-5 font-serif text-3xl font-light sm:text-4xl">Not The Right Fit</h2>
           </div>
           <ul className="mt-10 space-y-4">
             {NOT_FIT.map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-stone-800 text-stone-400">
+                <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-banner-foreground/15 text-banner-foreground">
                   <X className="h-3.5 w-3.5" />
                 </span>
-                <span className="leading-relaxed text-stone-200">{item}</span>
+                <span className="leading-relaxed text-banner-foreground">{item}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-10 text-center text-sm leading-relaxed text-stone-400">
+          <p className="mt-10 text-center text-sm leading-relaxed text-banner-foreground/75">
             Lucid Village feels special because of the people who come here. Protecting that
             culture matters.
           </p>

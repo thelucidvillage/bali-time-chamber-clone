@@ -442,7 +442,7 @@ function DetailsPage() {
           {ADVENTURES.map((a) => (
             <span
               key={a}
-              className="rounded-full border border-foreground/15 bg-white px-4 py-2 text-xs"
+              className="rounded-full border border-foreground/20 bg-card px-4 py-2 text-xs"
             >
               {a}
             </span>

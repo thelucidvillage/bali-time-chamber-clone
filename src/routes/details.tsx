@@ -186,7 +186,7 @@ const PRIVATE_TIERS = [
 
 function DetailsPage() {
   return (
-    <div className="min-h-dvh bg-[#faf8f4] text-foreground">
+    <div className="min-h-dvh bg-background text-foreground">
       {/* Top bar */}
       <header className="absolute left-0 right-0 top-0 z-20">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
@@ -260,7 +260,7 @@ function DetailsPage() {
           </p>
         </div>
 
-        <div className="mt-12 rounded-3xl border border-foreground/10 bg-white/60 p-8 shadow-sm backdrop-blur sm:p-10">
+        <div className="mt-12 rounded-3xl border border-foreground/10 bg-card/70 p-8 shadow-sm backdrop-blur sm:p-10">
           <p className="text-center text-sm uppercase tracking-[0.22em] text-muted-foreground">
             You'll likely feel at home here if
           </p>
@@ -335,7 +335,7 @@ function DetailsPage() {
           ].map((item) => (
             <div
               key={item}
-              className="rounded-2xl border border-foreground/10 bg-white/60 p-5 text-center text-sm leading-snug shadow-sm"
+              className="rounded-2xl border border-foreground/10 bg-card/70 p-5 text-center text-sm leading-snug shadow-sm"
             >
               {item}
             </div>
@@ -356,7 +356,7 @@ function DetailsPage() {
       </Section>
 
       {/* DAILY RHYTHM */}
-      <Section className="bg-[#f1ece2]">
+      <Section className="bg-card">
         <div className="text-center">
           <Eyebrow>A typical day</Eyebrow>
           <H2>A Day At Lucid Village</H2>
@@ -369,9 +369,9 @@ function DetailsPage() {
           {RHYTHM.map((r) => (
             <div
               key={r.time}
-              className="flex items-center gap-5 rounded-2xl border border-foreground/10 bg-white p-5 shadow-sm"
+              className="flex items-center gap-5 rounded-2xl border border-foreground/15 bg-card p-5 shadow-sm"
             >
-              <div className="grid h-12 w-16 shrink-0 place-items-center rounded-xl bg-foreground/5 font-serif text-lg">
+              <div className="grid h-12 w-16 shrink-0 place-items-center rounded-xl bg-foreground/10 font-serif text-lg">
                 {r.time}
               </div>
               <p className="text-sm leading-relaxed sm:text-base">{r.label}</p>
@@ -400,7 +400,7 @@ function DetailsPage() {
           {["5 days", "10 days", "14 days", "21 days", "28+ days"].map((s) => (
             <div
               key={s}
-              className="rounded-2xl border border-foreground/10 bg-white py-5 text-center text-sm shadow-sm"
+              className="rounded-2xl border border-foreground/15 bg-card py-5 text-center text-sm shadow-sm"
             >
               {s}
             </div>
@@ -413,7 +413,7 @@ function DetailsPage() {
       </Section>
 
       {/* WHAT'S INCLUDED */}
-      <Section className="bg-[#f1ece2]">
+      <Section className="bg-card">
         <div className="text-center">
           <Eyebrow>Included</Eyebrow>
           <H2>What's Included</H2>
@@ -423,9 +423,9 @@ function DetailsPage() {
           {INCLUDED.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-3 rounded-2xl border border-foreground/10 bg-white p-4 shadow-sm"
+              className="flex items-center gap-3 rounded-2xl border border-foreground/15 bg-card p-4 shadow-sm"
             >
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-foreground/5">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-foreground/10">
                 <Icon className="h-4 w-4" />
               </span>
               <span className="text-sm leading-snug">{label}</span>
@@ -464,7 +464,7 @@ function DetailsPage() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {/* Shared */}
-          <div className="flex flex-col rounded-3xl border border-foreground/10 bg-white p-7 shadow-sm">
+          <div className="flex flex-col rounded-3xl border border-foreground/15 bg-card p-7 shadow-sm">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
               Shared Guesthouse
             </p>
@@ -521,7 +521,7 @@ function DetailsPage() {
       </Section>
 
       {/* BOOKING PROCESS */}
-      <Section className="bg-[#f1ece2]">
+      <Section className="bg-card">
         <div className="text-center">
           <Eyebrow>How it works</Eyebrow>
           <H2>How Booking Works</H2>
@@ -535,7 +535,7 @@ function DetailsPage() {
           ].map((s) => (
             <div
               key={s.n}
-              className="flex gap-5 rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm"
+              className="flex gap-5 rounded-2xl border border-foreground/15 bg-card p-6 shadow-sm"
             >
               <div className="font-serif text-3xl font-light text-foreground/30">{s.n}</div>
               <div>
@@ -547,13 +547,13 @@ function DetailsPage() {
         </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl border border-foreground/10 bg-white p-6 text-center">
+          <div className="rounded-2xl border border-foreground/15 bg-card p-6 text-center">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
               Shared deposit
             </p>
             <p className="mt-3 font-serif text-3xl font-light">€300</p>
           </div>
-          <div className="rounded-2xl border border-foreground/10 bg-white p-6 text-center">
+          <div className="rounded-2xl border border-foreground/15 bg-card p-6 text-center">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
               Private deposit
             </p>
@@ -589,7 +589,7 @@ function DetailsPage() {
       </Section>
 
       {/* GETTING HERE */}
-      <Section id="getting-here" className="bg-[#f1ece2]">
+      <Section id="getting-here" className="bg-card">
         <div className="text-center">
           <Eyebrow>Your journey</Eyebrow>
           <H2>Getting Here</H2>
@@ -618,10 +618,10 @@ function DetailsPage() {
           ].map((s) => (
             <div
               key={s.n}
-              className="flex gap-5 rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm"
+              className="flex gap-5 rounded-2xl border border-foreground/15 bg-card p-6 shadow-sm"
             >
               <div className="flex flex-col items-center">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-foreground/5">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-foreground/10">
                   <s.icon className="h-4 w-4" />
                 </span>
                 <span className="mt-2 font-serif text-xs text-foreground/40">{s.n}</span>
@@ -665,9 +665,9 @@ function DetailsPage() {
           ].map((f) => (
             <div
               key={f.t}
-              className="flex items-center gap-3 rounded-2xl border border-foreground/10 bg-white p-5 shadow-sm"
+              className="flex items-center gap-3 rounded-2xl border border-foreground/15 bg-card p-5 shadow-sm"
             >
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-foreground/5">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-foreground/10">
                 <f.icon className="h-4 w-4" />
               </span>
               <span className="text-sm">{f.t}</span>
@@ -677,7 +677,7 @@ function DetailsPage() {
       </Section>
 
       {/* TRANSPORT OPTIONS — FAQ */}
-      <Section className="bg-[#f1ece2]">
+      <Section className="bg-card">
         <div className="text-center">
           <Eyebrow>Transport options</Eyebrow>
           <H2>How To Reach Us</H2>
@@ -686,7 +686,7 @@ function DetailsPage() {
         <Accordion type="single" collapsible className="mt-10 space-y-3">
           <AccordionItem
             value="bus"
-            className="rounded-2xl border border-foreground/10 bg-white px-5 shadow-sm"
+            className="rounded-2xl border border-foreground/15 bg-card px-5 shadow-sm"
           >
             <AccordionTrigger className="py-5 text-left">
               <span className="flex items-center gap-3">
@@ -708,7 +708,7 @@ function DetailsPage() {
 
           <AccordionItem
             value="private"
-            className="rounded-2xl border border-foreground/10 bg-white px-5 shadow-sm"
+            className="rounded-2xl border border-foreground/15 bg-card px-5 shadow-sm"
           >
             <AccordionTrigger className="py-5 text-left">
               <span className="flex items-center gap-3">
@@ -722,7 +722,7 @@ function DetailsPage() {
 
           <AccordionItem
             value="rental"
-            className="rounded-2xl border border-foreground/10 bg-white px-5 shadow-sm"
+            className="rounded-2xl border border-foreground/15 bg-card px-5 shadow-sm"
           >
             <AccordionTrigger className="py-5 text-left">
               <span className="flex items-center gap-3">
@@ -748,13 +748,13 @@ function DetailsPage() {
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm">
+          <div className="rounded-2xl border border-foreground/15 bg-card p-6 shadow-sm">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Arrival</p>
             <p className="mt-3 font-serif text-xl font-light leading-snug">
               Arrive in Athens before 12:00 PM
             </p>
           </div>
-          <div className="rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm">
+          <div className="rounded-2xl border border-foreground/15 bg-card p-6 shadow-sm">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Departure</p>
             <p className="mt-3 font-serif text-xl font-light leading-snug">
               Book flights after 7:00 PM
@@ -768,7 +768,7 @@ function DetailsPage() {
       </Section>
 
       {/* QUESTIONS */}
-      <Section className="bg-[#f1ece2]">
+      <Section className="bg-card">
         <div className="text-center">
           <Eyebrow>Get in touch</Eyebrow>
           <H2>Questions?</H2>
@@ -817,9 +817,9 @@ function DetailsPage() {
               href={c.href}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-4 rounded-2xl border border-foreground/10 bg-white p-5 shadow-sm transition hover:border-foreground/30"
+              className="flex items-center gap-4 rounded-2xl border border-foreground/15 bg-card p-5 shadow-sm transition hover:border-foreground/30"
             >
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-foreground/5">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-foreground/10">
                 <c.icon className="h-4 w-4" />
               </span>
               <div className="min-w-0 flex-1">

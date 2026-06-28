@@ -285,7 +285,7 @@ function DetailsPage() {
 
       {/* NOT FIT */}
       <Section>
-        <div className="rounded-3xl border border-stone-300/60 bg-stone-900 p-8 text-stone-100 sm:p-12">
+        <div className="rounded-3xl border border-banner/60 bg-banner p-8 text-banner-foreground sm:p-12">
           <div className="text-center">
             <Eyebrow>
               <span className="text-stone-400">Protecting the culture</span>
